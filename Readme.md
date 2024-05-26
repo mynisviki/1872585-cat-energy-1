@@ -1,7 +1,7 @@
 # Личный проект «Кэт энерджи»
 
 * Студент: [Viktoria Kucherova](https://up.htmlacademy.ru/adaptive-individual/1/user/1872585).
-* Наставник: `Неизвестно`.
+* Наставник: `Николай Колганов`.
 
 ---
 
