@@ -1,0 +1,50 @@
+.hero {
+  margin-bottom: 20px;
+}
+
+.hero__wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  content: "";
+  position: relative;
+  background-size: 320px 302px;
+  background-image: url("../../img/index-background-mobile.jpg");
+  background-repeat: no-repeat;
+  background-position: center top;
+  padding-top: 27px;
+}
+
+.hero__title {
+  font-family: "Oswald", sans-serif;
+  font-weight: 400;
+  font-size: 36px;
+  line-height: 36px;
+  color: @color-white;
+  text-align: center;
+  margin-top: 0;
+  margin-bottom: 25px;
+  z-index: 1;
+}
+
+.hero__text {
+  .base-heading();
+  
+  font-size: 14px;
+  line-height: 14px;
+  color: @color-white;
+  text-align: center;
+  text-transform: uppercase;
+  margin-bottom: 29px;
+  z-index: 1;
+}
+
+.hero__image {
+  z-index: 1;
+}
+
+.hero__button {
+ width: 100%;
+ box-sizing: border-box;
+}
+

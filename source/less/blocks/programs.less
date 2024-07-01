@@ -1,0 +1,77 @@
+.programs-list {
+  padding: 0;
+}
+
+.programs-list__item {
+  background-color: @color-basic-grey;
+  padding: 20px;
+}
+
+.programs-list__item:not(:last-child) {
+  margin-bottom: 20px;
+}
+
+.programs-list__wrapper {
+  display: flex;
+}
+
+.program-item__title {
+  .base-heading();
+  
+  font-size: 24px;
+  line-height: 37px;
+  text-align: center;
+  margin-top: 0;
+  margin-bottom: 29px;
+}
+
+.program-item__icon {
+  display: block;
+  background-position: center;
+}
+
+.program-item__icon--cat-sit {
+  background-image: url("../../img/cat-sit-icon-mobile.svg");
+  width: 50px;
+  height: 53px;
+  margin-right: 20px;
+}
+
+.program-item__icon--cat-walk {
+  background-image: url("../../img/cat-walk-icon-mobile.svg");
+  width: 67px;
+  height: 50px;
+  margin-right: 11px;
+}
+
+.program-item__description {
+  margin: 0;
+  margin-bottom: 15px;
+}
+
+.program-item__description::after {
+  content: '';
+  display: block;
+  height: 1px;
+  margin-top: 23px;
+  background: @color-light-grey;
+}
+
+.catalog-link {
+  .base-heading();
+
+  font-size: 16px;
+  line-height: 16px;
+}
+
+.right-arrow {
+  content: "";
+  width: 24px;
+  height: 12px;
+  display: inline-block;
+  background-image: url("../../img/rigth-arrow.svg");
+  background-repeat: no-repeat;
+  background-position: center right;
+  border: none;
+  margin-left: 25px;
+}
