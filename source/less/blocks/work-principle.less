@@ -29,29 +29,47 @@
 }
 
 .work-principle__item--icon {
-  background-size: 60px 60px;
+  display: flex;
+  gap: 20px;
+  align-items: center;
+}
+
+.work-principle__item--icon::before {
+  flex-shrink: 0;
+  background-position: center;
+  content: "";
+  display: block;
+  width: 60px;
+  height: 60px;
   background-repeat: no-repeat;
+  background-color: @color-basic-green;
 }
 
-.work-principle__item--icon-leaf {
+.work-principle__item--icon-leaf::before {
   background-image: url("../../img/icon/icon-leaf.svg");
+  background-size: 30px 32px;
 }
 
-.work-principle__item--icon-tub {
+.work-principle__item--icon-tub::before {
   background-image: url("../../img/icon/icon-tub.svg");
+  background-size: 26px 29px;
 }
 
-.work-principle__item--icon-eat {
+.work-principle__item--icon-eat::before {
   background-image: url("../../img/icon/icon-eat.svg");
+  background-size: 25px 30px;
 }
 
 .work-principle__item--icon-alarm {
-  background-image: url("../../img/icon/icon-alarm.svg");
   margin-bottom: 49px;
 }
 
-.work-principle__text {
+.work-principle__item--icon-alarm::before {
+  background-image: url("../../img/icon/icon-alarm.svg");
+  background-size: 26px 31px;
+}
+
+.work-principle__text::before {
   color: @color-special-dark-grey;
   margin: 0;
-  margin-left: 80px;
 }

@@ -14,16 +14,16 @@
   <header class="main-header">
     <div class="main-header__wrapper container">
       <div class="main-header__logo-wrapper">
-      <a class="main-header__logo">
-        <picture>
-          <source media="(min-width: 768px)" srcset="img/logo/logo-tablet.svg">
-          <img class="main-header__logo-image" src="img/logo/logo-mobile.svg" alt="Логотип 'Кэт энерджи'">
-        </picture>
-      </a>
-      <a class="main-header__logo-text logo-text">
-        <img src="img/logo/logo-text.svg" width="101" height="18" alt="Логотип 'Cat Energy'">
-      </a>
-    </div>
+        <a class="main-header__logo">
+          <picture>
+            <source media="(min-width: 768px)" srcset="img/logo/logo-tablet.svg">
+            <img class="main-header__logo-image" src="img/logo/logo-mobile.svg" alt="Логотип 'Кэт энерджи'">
+          </picture>
+        </a>
+        <a class="main-header__logo-text logo-text">
+          <img src="img/logo/logo-text.svg" width="101" height="18" alt="Логотип 'Cat Energy'">
+        </a>
+      </div>
       <nav class="main-nav">
         <!-- Когда меню показано, то у кнопки добавляется класс burger-menu-button--close, а у ul добавляется класс main-nav__list--shown -->
         <button class="burger-menu-button" type="button" aria-label="Toggle меню"></button>
@@ -50,7 +50,7 @@
 
   <main class="main-container">
     <h1 class="visually-hidden">Кэт энерджи</h1>
-
+    <div class="index-background-image"></div>
     <!-- Hero block -->
     <section class="hero">
       <div class="hero__wrapper container">
@@ -60,7 +60,11 @@
         <p class="hero__text">
           Занялся собой? Займись котом!
         </p>
-        <img class="hero__image" src="img/product-image.png" alt="Изображение банки с питанием для кошек">
+        <picture>
+          <source media="(min-width: 1440px)" srcset="img/product-image-pc.png">
+          <source media="(min-width: 768px)" srcset="img/product-image-tablet.png">
+          <img class="hero__image" src="img/product-image-mobile.png" alt="Изображение банки с питанием для кошек">
+        </picture>
         <a class="hero__button button" href="form.html">Подобрать программу</a>
       </div>
     </section>
