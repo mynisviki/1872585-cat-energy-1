@@ -7,6 +7,12 @@
   margin-top: 0;
   margin-bottom: 29px;
   text-transform: uppercase;
+
+  @media (min-width: @tablet-width) {
+    .heading-large();
+
+    margin-bottom: 24px;
+  }
 }
 
 .program-item__icon {
@@ -32,6 +38,14 @@
   color: @color-special-dark-grey;
   margin: 0;
   margin-bottom: 15px;
+
+  @media (min-width: @tablet-width) {
+    .base-lato();
+
+    font-size: 16px;
+    line-height: 24px;
+    margin-bottom: 48px;
+  }
 }
 
 .program-item__description::after {
@@ -40,4 +54,8 @@
   height: 1px;
   margin-top: 23px;
   background: @color-light-grey;
+
+  @media (min-width: @tablet-width) {
+    display: none;
+  }
 }

@@ -2,7 +2,16 @@
 .catalog-link {
   .base-heading();
 
+  display: flex;
+  align-items: center;
   font-size: 16px;
   line-height: 16px;
   text-transform: uppercase;
+  gap: 15px;
+
+  @media (min-width: @tablet-width) {
+    font-size: 20px;
+    line-height: 30px;
+    gap: 25px;
+  }
 }

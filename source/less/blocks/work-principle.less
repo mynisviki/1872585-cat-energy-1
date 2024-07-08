@@ -1,13 +1,11 @@
 .work-principle__wrapper {
   padding-top: 0;
-  padding-left: 20px;
-  padding-right: 20px;
 }
 
 .work-principle__title {
-  font-family: "Oswald", sans-serif;
+  .base-heading();
+
   font-size: 36px;
-  font-weight: 400;
   line-height: 40px;
   margin-top: 0;
   margin-bottom: 40px;
@@ -18,20 +16,69 @@
   flex-direction: column;
   margin: 0;
   padding: 0;
+  gap: 20px;
+  margin-bottom: 49px;
+
+  @media (min-width: @tablet-width) {
+    display: grid;
+    grid-template-columns: 383px 1fr;
+    row-gap: 37px;
+    column-gap: 0;
+    counter-reset: number 0;
+  }
 }
 
 .work-principle__item {
   display: inline-block;
+
+  @media (min-width: @tablet-width) {
+    position: relative;
+    width: 250px;
+    counter-increment: number 1;
+
+    &:nth-child(1) {
+      width: 230px;
+    }
+
+    &:nth-child(2) {
+      width: 246px;
+    }
+
+    &:nth-child(3) {
+      width: 247px;
+    }
+
+    &:nth-child(4) {
+      width: 249px;
+    }
+
+    &::after {
+      .base-heading();
+
+      position: absolute;
+      z-index: -1;
+      content: counter(number);
+      top: -39px;
+      right: 0;
+      font-size: 280px;
+      line-height: 280px;
+      color: @color-basic-grey;
+    }
+  }
 }
 
-.work-principle__item:not(:last-child) {
-  margin-bottom: 20px;
-}
 
 .work-principle__item--icon {
   display: flex;
   gap: 20px;
   align-items: center;
+
+
+  @media (min-width: @tablet-width) {
+    flex-direction: column;
+    align-items: start;
+    gap: 31px;
+  }
 }
 
 .work-principle__item--icon::before {
@@ -43,6 +90,11 @@
   height: 60px;
   background-repeat: no-repeat;
   background-color: @color-basic-green;
+
+  @media (min-width: @tablet-width) {
+    width: 80px;
+    height: 80px;
+  }
 }
 
 .work-principle__item--icon-leaf::before {
@@ -60,13 +112,22 @@
   background-size: 25px 30px;
 }
 
-.work-principle__item--icon-alarm {
-  margin-bottom: 49px;
-}
-
 .work-principle__item--icon-alarm::before {
   background-image: url("../../img/icon/icon-alarm.svg");
   background-size: 26px 31px;
+}
+
+.work-principle__text {
+  margin: 0;
+
+  @media (min-width: @tablet-width) {
+    .base-lato();
+
+    font-size: 16px;
+    line-height: 24px;
+    margin-bottom: 57px;
+
+  }
 }
 
 .work-principle__text::before {
