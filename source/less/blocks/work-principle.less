@@ -26,6 +26,12 @@
     column-gap: 0;
     counter-reset: number 0;
   }
+
+  @media (min-width: @desktop-width) {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
 }
 
 .work-principle__item {
