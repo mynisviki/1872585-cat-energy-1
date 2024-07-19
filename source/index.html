@@ -113,16 +113,18 @@
             <p class="work-principle__text">Замените один-два приема обычной еды на наше функциональное питание.</p>
           </li>
           <li class="work-principle__item work-principle__item--icon work-principle__item--icon-alarm">
-            <p class="work-principle__text">Уже через месяц наслаждайтесь изменениями к лучшему <br/> вашего питомца!</p>
+            <p class="work-principle__text">Уже через месяц наслаждайтесь изменениями к лучшему <br /> вашего питомца!
+            </p>
           </li>
         </ul>
       </div>
+      <div class="separator work-principle__separator"></div>
     </section>
 
     <!-- Results block -->
     <section class="results">
-      <div class="results__wrapper container">
-        <div class="results__content">
+      <div class="results__wrapper">
+        <div class="results__content container">
           <h2 class="results__title">Живой пример</h2>
           <p class="results__text">Борис сбросил 5 кг за 2 месяца, просто заменив свой обычный корм на Cat Energy
             Slim. Отличный результат без изнуряющих тренировок! При этом он не менял своих привычек и по-прежнему спит
@@ -130,18 +132,24 @@
           <ul class="statistics__list list">
             <li class="statistics__item">
               <p class="statistics__title">5 КГ</p>
-              <p class="statistics__text">Снижение веса</p>
+              <p class="statistics__text statistics__text--first">Снижение веса</p>
             </li>
             <li class="statistics__item">
               <p class="statistics__title">60 ДНЕЙ</p>
               <p class="statistics__text">Затрачено времени</p>
             </li>
           </ul>
-          <p class="results__label">Затраты на питание: 15 000 РУБ.</p>
-          <img class="results__image" src="img/cat-slider.png" width="280" height="256"
-            alt="Изображение кота 'до/после'">
+          <p class="results__label-wrapper">
+            <span class="results__label results__label--text">Затраты на питание:</span>
+            <span class="results__label results__label--value">15 000 РУБ.</span>
+          </p>
+          <picture class="results__image-wrapper">
+            <source media="(min-width: 768px)" srcset="img/cat-slider-tablet.png">
+            <img class="results__image" src="img/cat-slider-mobile.png" alt="Изображение кота 'до/после'">
+          </picture>
         </div>
       </div>
+      <div class="background-placeholder"></div>
     </section>
 
     <!-- Location block -->

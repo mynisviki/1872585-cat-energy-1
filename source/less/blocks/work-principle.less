@@ -25,12 +25,14 @@
     row-gap: 37px;
     column-gap: 0;
     counter-reset: number 0;
+    margin-bottom: 45px;
   }
 
   @media (min-width: @desktop-width) {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+    margin-bottom: 69px;
   }
 }
 
@@ -72,7 +74,6 @@
     }
   }
 }
-
 
 .work-principle__item--icon {
   display: flex;
@@ -139,4 +140,17 @@
 .work-principle__text::before {
   color: @color-special-dark-grey;
   margin: 0;
+}
+
+.work-principle__separator {
+  display: none;
+
+  @media (min-width: @tablet-width) {
+    display: inline-block;
+    margin-bottom: 45px;
+  }
+
+  @media (min-width: @desktop-width) {
+    display: none;
+  }
 }
