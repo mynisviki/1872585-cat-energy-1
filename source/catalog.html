@@ -11,7 +11,7 @@
 <body class="page__body">
 
   <!-- Header -->
-  <header class="header">
+  <header class="header header--catalog">
     <div class="header__wrapper container">
       <div class="header__logo-wrapper">
         <a class="header__logo">
@@ -20,26 +20,26 @@
             <img class="header__logo-image" src="img/logo/logo-mobile.svg" alt="Логотип 'Кэт энерджи'">
           </picture>
         </a>
-        <a class="header__logo-text logo-text">
-          <img src="img/logo/logo-text.svg" width="101" height="18" alt="Логотип 'Cat Energy'">
+        <a class="header__logo-text">
+          <img class="logo-text" src="img/logo/logo-text.svg" width="101" height="18" alt="Логотип 'Cat Energy'">
         </a>
       </div>
       <nav class="main-nav">
         <!-- Когда меню показано, то у кнопки добавляется класс burger-menu-button--close, а у ul добавляется класс main-nav__list--shown -->
         <button class="burger-menu-button" type="button" aria-label="Toggle меню"></button>
         <ul class="main-nav__list site-list list">
-          <li class="site-list__item">
-            <a class="site-list__href" href="index.html">
+          <li class="site-list__item site-list__item--catalog">
+            <a class="site-list__href site-list__href--catalog" href="index.html">
               Главная
             </a>
           </li>
-          <li class="site-list__item">
-            <a class="site-list__href" href="catalog.html">
+          <li class="site-list__item site-list__item--catalog">
+            <a class="site-list__href site-list__href--catalog" href="catalog.html">
               Каталог продукции
             </a>
           </li>
-          <li class="site-list__item">
-            <a class="site-list__href" href="form.html">
+          <li class="site-list__item site-list__item--catalog">
+            <a class="site-list__href site-list__href--catalog" href="form.html">
               Подбор программы
             </a>
           </li>
@@ -48,7 +48,7 @@
     </div>
   </header>
 
-  <div class="separator"></div>
+  <div class="separator separator--catalog"></div>
 
   <main class="main-container">
     <h1 class="visually-hidden">Кэт энерджи</h1>
@@ -59,15 +59,15 @@
         <h2 class="heading-large catalog__title container">
           Каталог продукции
         </h2>
-        <div class="separator"></div>
+        <div class="separator separator--catalog"></div>
         <ul class="catalog-list list">
           <li class="catalog-list__item catalog-item">
             <div class="container">
               <div class="catalog-item__wrapper">
-                <div class="catalog-item__image-wrapper">
-                  <img class="catalog-item__image" src="img/chicken-500.png" width="68" height="86"
-                    alt="Cat Energy PRO 500 грамм со вкусом курицы">
-                </div>
+                <picture class="catalog-item__image-wrapper">
+                  <source media="(min-width: 768px)" srcset="img/chicken-500-tablet-desktop.png">
+                  <img class="catalog-item__image" src="img/chicken-500.png" alt="Cat Energy PRO 500 грамм со вкусом курицы">
+                </picture>
                 <div class="catalog-item__content">
                   <h3 class="heading-small catalog-item__title">Cat Energy PRO 500 г</h3>
                   <table class="catalog-item__info  catalog-info">
@@ -90,7 +90,7 @@
               </div>
               <a class="button catalog-item__button" href="#">Заказать</a>
             </div>
-            <div class="separator"></div>
+            <div class="separator separator--catalog"></div>
           </li>
 
           <li class="catalog-list__item catalog-item">
@@ -122,7 +122,7 @@
               </div>
               <a class="button catalog-item__button" href="#">Заказать</a>
             </div>
-            <div class="separator"></div>
+            <div class="separator separator--catalog"></div>
           </li>
 
           <li class="catalog-list__item catalog-item">
@@ -154,7 +154,7 @@
               </div>
               <a class="button catalog-item__button" href="#">Заказать</a>
             </div>
-            <div class="separator"></div>
+            <div class="separator separator--catalog"></div>
           </li>
 
           <li class="catalog-list__item catalog-item">
@@ -186,7 +186,7 @@
               </div>
               <a class="button catalog-item__button" href="#">Заказать</a>
             </div>
-            <div class="separator"></div>
+            <div class="separator separator--catalog"></div>
           </li>
 
           <li class="catalog-list__item catalog-item">
@@ -218,7 +218,7 @@
               </div>
               <a class="button catalog-item__button" href="#">Заказать</a>
             </div>
-            <div class="separator"></div>
+            <div class="separator separator--catalog"></div>
           </li>
 
           <li class="catalog-list__item catalog-item">
@@ -250,7 +250,7 @@
               </div>
               <a class="button catalog-item__button" href="#">Заказать</a>
             </div>
-            <div class="separator"></div>
+            <div class="separator separator--catalog"></div>
           </li>
 
           <li class="catalog-list__item catalog-item">
@@ -282,7 +282,7 @@
               </div>
               <a class="button catalog-item__button" href="#">Заказать</a>
             </div>
-            <div class="separator"></div>
+            <div class="separator separator--catalog"></div>
           </li>
           <li class="catalog__more catalog-more">
             <div class="catalog-more__container container">
@@ -291,7 +291,7 @@
               <p class="catalog-more__text">На самом деле вкусов гораздо больше!</p>
               <a class="button catalog-more__link">Показать все</a>
             </div>
-            <div class="separator"></div>
+            <div class="separator separator--catalog"></div>
           </li>
         </ul>
       </div>
@@ -303,7 +303,7 @@
         <div class="container">
           <h2 class="catalog-add__title">Дополнительные товары</h2>
         </div>
-        <div class="separator"></div>
+        <div class="separator separator--catalog"></div>
         <ul class="catalog-add__list list">
           <li class="catalog-add__item">
             <div class="container">
@@ -318,54 +318,54 @@
               </table>
               <a class="button catalog-add__button" href="#">Заказать</a>
             </div>
-            <div class="separator"></div>
+            <div class="separator separator--catalog"></div>
           </li>
 
           <li class="catalog-add__item">
             <div class="container">
-            <h3 class="catalog-add__item-title">Питьевая вода</h3>
-            <table class="catalog-add__info">
-              <tbody>
-                <tr class="catalog-add__row">
-                  <td class="catalog-add__key">5 литров</td>
-                  <td class="catalog-add__value">50 ₽</td>
-                </tr>
-              </tbody>
-            </table>
-            <a class="button catalog-add__button" href="#">Заказать</a>
-          </div>
-          <div class="separator"></div>
+              <h3 class="catalog-add__item-title">Питьевая вода</h3>
+              <table class="catalog-add__info">
+                <tbody>
+                  <tr class="catalog-add__row">
+                    <td class="catalog-add__key">5 литров</td>
+                    <td class="catalog-add__value">50 ₽</td>
+                  </tr>
+                </tbody>
+              </table>
+              <a class="button catalog-add__button" href="#">Заказать</a>
+            </div>
+            <div class="separator separator--catalog"></div>
           </li>
 
           <li class="catalog-add__item">
             <div class="container">
-            <h3 class="catalog-add__item-title">Молоко</h3>
-            <table class="catalog-add__info">
-              <tbody>
-                <tr class="catalog-add__row">
-                  <td class="catalog-add__key">1 литр</td>
-                  <td class="catalog-add__value">100 ₽</td>
-                </tr>
-              </tbody>
-            </table>
-            <a class="button catalog-add__button" href="#">Заказать</a>
-          </div>
-            <div class="separator"></div>
+              <h3 class="catalog-add__item-title">Молоко</h3>
+              <table class="catalog-add__info">
+                <tbody>
+                  <tr class="catalog-add__row">
+                    <td class="catalog-add__key">1 литр</td>
+                    <td class="catalog-add__value">100 ₽</td>
+                  </tr>
+                </tbody>
+              </table>
+              <a class="button catalog-add__button" href="#">Заказать</a>
+            </div>
+            <div class="separator separator--catalog"></div>
           </li>
 
           <li class="catalog-add__item">
             <div class="container">
-            <h3 class="catalog-add__item-title">Витамины</h3>
-            <table class="catalog-add__info">
-              <tbody>
-                <tr class="catalog-add__row">
-                  <td class="catalog-add__key">1 упаковка (30 г)</td>
-                  <td class="catalog-add__value">300 ₽</td>
-                </tr>
-              </tbody>
-            </table>
-            <a class="button catalog-add__button" href="#">Заказать</a>
-            <div class="separator"></div>
+              <h3 class="catalog-add__item-title">Витамины</h3>
+              <table class="catalog-add__info">
+                <tbody>
+                  <tr class="catalog-add__row">
+                    <td class="catalog-add__key">1 упаковка (30 г)</td>
+                    <td class="catalog-add__value">300 ₽</td>
+                  </tr>
+                </tbody>
+              </table>
+              <a class="button catalog-add__button" href="#">Заказать</a>
+              <div class="separator separator--catalog"></div>
             </div>
           </li>
         </ul>
@@ -380,19 +380,24 @@
     <!-- Location block -->
     <section class="location">
       <h2 class="visually-hidden">Адрес</h2>
-      <div class="location__wrapper container location__wrapper-color">
+      <div class="location__wrapper location__wrapper--catalog container">
         <div class="location-wrapper">
           <p class="heading-small location-label">Приглашаем к сотрудничеству дилеров!</p>
           <address class="location-address">ул. Большая Конюшенная, д. 19/8 Санкт-Петербург</address>
         </div>
       </div>
       <div class="map-container">
-        <img class="location__image" src="img/map-mobile.jpg" width="320" height="362"
-          alt="Карта с местоположением 'Кэт энерджи'">
-        <span class="location-map-pin">
+
+        <picture>
+          <source media="(min-width: 1440px)" srcset="img/map-desktop.jpg">
+          <source media="(min-width: 768px)" srcset="img/map-tablet.jpg">
+          <img class="location__image" src="img/map-mobile.jpg" alt="Карта с местоположением 'Кэт энерджи'">
+        </picture>
+
+        <!-- <span class="location-map-pin">
           <img class="location__pin" src="img/map-pin.png" width="57" height="53"
             alt="Магазин 'Кэт энерджи' находится здесь">
-        </span>
+        </span> -->
       </div>
     </section>
   </main>

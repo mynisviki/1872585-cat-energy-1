@@ -122,13 +122,13 @@
     </section>
 
     <!-- Results block -->
-    <section class="results">
-      <div class="results__wrapper">
-        <div class="results__content container">
+    <section class="results container">
+        <div class="results__content">
           <h2 class="results__title">Живой пример</h2>
           <p class="results__text">Борис сбросил 5 кг за 2 месяца, просто заменив свой обычный корм на Cat Energy
             Slim. Отличный результат без изнуряющих тренировок! При этом он не менял своих привычек и по-прежнему спит
             по 16 часов в день.</p>
+            <div class="statistics">
           <ul class="statistics__list list">
             <li class="statistics__item">
               <p class="statistics__title">5 КГ</p>
@@ -143,13 +143,16 @@
             <span class="results__label results__label--text">Затраты на питание:</span>
             <span class="results__label results__label--value">15 000 РУБ.</span>
           </p>
-          <picture class="results__image-wrapper">
+        </div>
+        <div class="results__image-wrapper">
+          <picture>
             <source media="(min-width: 768px)" srcset="img/cat-slider-tablet.png">
             <img class="results__image" src="img/cat-slider-mobile.png" alt="Изображение кота 'до/после'">
           </picture>
         </div>
-      </div>
-      <div class="background-placeholder"></div>
+        </div>
+
+      <!-- <div class="background-placeholder"></div> -->
     </section>
 
     <!-- Location block -->
@@ -162,12 +165,18 @@
         </div>
       </div>
       <div class="map-container">
-        <img class="location__image" src="img/map-mobile.jpg" width="320" height="362"
+
+        <picture>
+          <source media="(min-width: 1440px)" srcset="img/map-desktop.jpg">
+          <source media="(min-width: 768px)" srcset="img/map-tablet.jpg">
+          <img class="location__image" src="img/map-mobile.jpg"
           alt="Карта с местоположением 'Кэт энерджи'">
-        <span class="location-map-pin">
+        </picture>
+
+        <!-- <span class="location-map-pin">
           <img class="location__pin" src="img/map-pin.png" width="57" height="53"
             alt="Магазин 'Кэт энерджи' находится здесь">
-        </span>
+        </span> -->
       </div>
     </section>
   </main>

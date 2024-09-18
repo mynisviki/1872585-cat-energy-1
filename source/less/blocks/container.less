@@ -1,18 +1,18 @@
 .container {
   margin: 0 auto;
   width: 280px;
-  padding-left: 20px;
-  padding-right: 20px;
+  padding-left: @container-horizontal-padding;
+  padding-right: @container-horizontal-padding;
 
   @media (min-width: @tablet-width) {
     width: 708px;
-    padding-left: 30px;
-    padding-right: 30px;
+    padding-left: @container-horizontal-padding-tablet;
+    padding-right: @container-horizontal-padding-tablet;
   }
 
   @media (min-width: @desktop-width) {
     width: 1220px;
-    padding-left: 110px;
-    padding-right: 110px;
+    padding-left: @container-horizontal-padding-desktop;
+    padding-right: @container-horizontal-padding-desktop;
   }
 }

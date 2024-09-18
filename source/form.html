@@ -166,19 +166,25 @@
     <!-- Location block -->
     <section class="location">
       <h2 class="visually-hidden">Адрес</h2>
-      <div class="location__wrapper location__wrapper-color container">
+      <div class="location__wrapper container">
         <div class="location-wrapper">
           <p class="heading-small location-label">Приглашаем к сотрудничеству дилеров!</p>
           <address class="location-address">ул. Большая Конюшенная, д. 19/8 Санкт-Петербург</address>
         </div>
       </div>
       <div class="map-container">
-        <img class="location__image" src="img/map-mobile.jpg" width="320" height="362"
+
+        <picture>
+          <source media="(min-width: 1440px)" srcset="img/map-desktop.jpg">
+          <source media="(min-width: 768px)" srcset="img/map-tablet.jpg">
+          <img class="location__image" src="img/map-mobile.jpg"
           alt="Карта с местоположением 'Кэт энерджи'">
-        <span class="location-map-pin">
+        </picture>
+
+        <!-- <span class="location-map-pin">
           <img class="location__pin" src="img/map-pin.png" width="57" height="53"
             alt="Магазин 'Кэт энерджи' находится здесь">
-        </span>
+        </span> -->
       </div>
     </section>
   </main>
