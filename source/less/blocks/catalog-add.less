@@ -1,3 +1,11 @@
+.catalog-add {
+  @media (min-width: @desktop-width) {
+    padding-left: @container-horizontal-padding-desktop;
+    padding-right: @container-horizontal-padding-desktop;
+  }
+
+}
+
 .catalog-add__title {
   .base-heading();
 
@@ -14,6 +22,14 @@
   }
 }
 
+.catalog-add__container {
+
+  @media (min-width: @desktop-width) {
+    display: flex;
+    gap: 80px;
+  }
+}
+
 .catalog-add__list {
   padding: 0;
   margin-bottom: 35px;
@@ -23,9 +39,30 @@
   }
 }
 
+.catalog-add__item-container {
+  padding-left: @container-horizontal-padding;
+  padding-right: @container-horizontal-padding;
+
+  @media (min-width: @tablet-width) {
+    padding-left: @container-horizontal-padding-tablet;
+    padding-right: @container-horizontal-padding-tablet;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding-left: 0;
+    padding-right: 0;
+  }
+}
+
 .catalog-add__item-wrapper {
 
   @media (min-width: @tablet-width) {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  @media (min-width: @desktop-width) {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -86,6 +123,7 @@
 .catalog-gift {
   display: flex;
   flex-direction: column;
+  flex-shrink: 0;
   gap: 48px;
   align-items: center;
   background-size: 280px 290px;
@@ -95,14 +133,22 @@
   margin-bottom: 35px;
   padding-top: 59px;
   padding-bottom: 43px;
+  padding-left: @container-horizontal-padding;
+  padding-right: @container-horizontal-padding;
 
-  @media (min-width: @tablet-width) {
+  @media (min-width: @tablet-width) and (max-width: @desktop-width) {
     flex-direction: row;
     background-size: 707px 200px;
     background-image: url("../../img/add-image-tablet.jpg");
     padding-top: 57px;
     padding-bottom: 60px;
     justify-content: space-between;
+    padding-left: @container-horizontal-padding-tablet;
+    padding-right: @container-horizontal-padding-tablet;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 245px;
   }
 }
 
@@ -113,7 +159,7 @@
   background-image: url("../../img/icon/icon-gift.svg");
   background-repeat: no-repeat;
 
-  @media (min-width: @tablet-width) {
+  @media (min-width: @tablet-width) and (max-width: @desktop-width) {
     margin-left: 77px;
   }
 }
@@ -128,7 +174,7 @@
   margin: 0;
   text-align: center;
 
-  @media (min-width: @tablet-width) {
+  @media (min-width: @tablet-width) and (max-width: @desktop-width) {
     margin-right: 125px;
     text-align: left;
   }
