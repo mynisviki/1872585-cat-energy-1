@@ -1,3 +1,9 @@
+.location {
+  @media (min-width: @desktop-width) {
+    position: relative;
+  }
+}
+
 .location__wrapper {
   background-color: @color-basic-grey;
 
@@ -20,19 +26,28 @@
   }
 
   @media (min-width: @desktop-width) {
-    display: none;
+    position: absolute;
+    margin-left: 0;
+    margin-right: 0;
+    z-index: 1;
+    left: 0;
+    top: 95px;
+    width: 407px;
+    padding: 60px 78px 60px 80px;
     background-color: @color-white;
-    margin-left: -@container-horizontal-padding-desktop;
-    margin-right: -@container-horizontal-padding-desktop;
-    padding-left: @container-horizontal-padding-desktop;
-    padding-right: @container-horizontal-padding-desktop;
   }
 }
+
 
 .location__wrapper--small {
   @media (min-width: @tablet-width) {
     margin-left: -@container-horizontal-padding-tablet-small;
     margin-right: -@container-horizontal-padding-tablet-small;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-left: 0;
+    margin-right: 0;
   }
 }
 
@@ -87,6 +102,11 @@
   @media (min-width: @tablet-width) {
     margin-left: -@container-horizontal-padding-tablet-small;
     margin-right: -@container-horizontal-padding-tablet-small;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-left: -@container-horizontal-padding-desktop;
+    margin-right: -@container-horizontal-padding-desktop;
   }
 }
 
