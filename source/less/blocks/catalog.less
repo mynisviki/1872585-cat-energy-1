@@ -4,7 +4,7 @@
     align-items: flex-end;
     justify-content: space-between;
     flex-wrap: wrap;
-    gap: 60px;
+    row-gap: 60px;
     margin-bottom: 70px;
   }
 
@@ -27,8 +27,13 @@
 }
 
 .catalog-list__item-container {
+  @media (min-width: @tablet-width) {
+    padding: 0 37px 40px 37px;
+    background-color: @color-basic-grey;
+  }
+
   @media (min-width: @desktop-width) {
-    max-width: 170px;
+    width: 171px;
   }
 }
 
@@ -50,6 +55,8 @@
     flex-direction: column;
     margin: 0;
   }
+
+  @media (min-width: @desktop-width) {}
 }
 
 .catalog-item__title {
@@ -149,6 +156,8 @@
 
   @media (min-width: @tablet-width) {
     margin-top: 0;
+    padding: 92px 36px 39px 36px;
+    border: 1px @color-extra-light-grey solid;
   }
 }
 
