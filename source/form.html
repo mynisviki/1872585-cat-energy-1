@@ -4,88 +4,88 @@
 <head>
   <meta charset="utf-8">
   <title>HTML Academy: Кэт энерджи</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="css/style.css">
 </head>
 
 <body class="page__body">
-
   <!-- Header -->
-  <header class="main-header">
-    <div class="main-header__wrapper container">
-      <a class="main-header__logo">
-        <img src="img/logo/logo-mobile.svg" width="33" height="38" alt="Логотип 'Кэт энерджи'">
-      </a>
-      <a class="main-header__logo-text logo-text">
-        <img src="img/logo/logo-text.svg" width="101" height="18" alt="Логотип 'Cat Energy'">
-      </a>
+  <header class="header container">
+    <div class="header__wrapper header__wrapper--catalog">
+      <div class="header__logo-wrapper">
+        <a class="header__logo">
+          <picture>
+            <source media="(min-width: 1440px)" srcset="img/logo/logo-desktop.svg">
+            <source media="(min-width: 768px)" srcset="img/logo/logo-tablet.svg">
+            <img class="header__logo-image" src="img/logo/logo-mobile.svg" alt="Логотип 'Кэт энерджи'">
+          </picture>
+        </a>
+        <a class="header__logo-text">
+          <img class="logo-text" src="img/logo/logo-text.svg" width="101" height="18" alt="Логотип 'Cat Energy'">
+        </a>
+      </div>
       <nav class="main-nav">
-        <button class="burger-menu" type="button" aria-label="Toggle меню"></button>
-        <div class="menu-toggle">
-          <input class="menu-toggle__input" type="checkbox" name="menu-toggle" id="menu-toggle" hidden>
-          <label for="menu-toggle" class="menu-toggle__label visually-hidden">
-            Toggle
-          </label>
-          <ul class="main-nav__list site-list list">
-            <li class="site-list__item">
-              <a href="index.html">
-                Главная
-              </a>
-            </li>
-            <li class="site-list__item">
-              <a href="catalog.html">
-                Каталог продукции
-              </a>
-            </li>
-            <li class="site-list__item">
-              <a href="form.html">
-                Подбор программы
-              </a>
-            </li>
-          </ul>
-        </div>
+        <!-- Когда меню показано, то у кнопки добавляется класс burger-menu-button--close, а у ul добавляется класс main-nav__list--shown -->
+        <button class="burger-menu-button" type="button" aria-label="Toggle меню"></button>
+        <ul class="main-nav__list site-list list">
+          <li class="site-list__item site-list__item--catalog">
+            <a class="site-list__href site-list__href--catalog" href="index.html">
+              Главная
+            </a>
+          </li>
+          <li class="site-list__item site-list__item--catalog">
+            <a class="site-list__href site-list__href--catalog" href="catalog.html">
+              Каталог продукции
+            </a>
+          </li>
+          <li class="site-list__item site-list__item--catalog">
+            <a class="site-list__href site-list__href--catalog" href="form.html">
+              Подбор программы
+            </a>
+          </li>
+        </ul>
       </nav>
     </div>
+    <div class="separator separator--wide separator--hidden"></div>
   </header>
 
-  <div class="separator"></div>
-
-  <main class="main-container">
+  <main class="main-container container container--small">
     <h1 class="visually-hidden">Кэт энерджи</h1>
 
     <!-- Program selection block -->
     <section class="program-selection">
       <div class="program-selection__wrapper">
-        <h2 class="heading-large program-selection__title container">
+        <h2 class="heading-large program-selection__title">
           Подбор программы
         </h2>
-        <p class="program-selection__text container">
+        <p class="program-selection__text">
           Заполните анкету, и мы подберем
           программу питания для вашего кота
         </p>
         <form class="program-selection__form form" action="https://echo.htmlacademy.ru/" method="post">
-          <fieldset class="program-selection__form-group container">
+          <fieldset class="program-selection__form-group">
             <ul class="program-selection__field-list list">
               <li class="program-selection__field-item">
-                <label for="name">Имя:</label>
+                <label class="program-selection__label" for="name">Имя:</label>
                 <input class="program-selection__field-input program-selection__field-input--text" type="text"
                   name="name" id="name" required>
               </li>
               <li class="program-selection__field-item">
-                <label for="weight">Вес (кг):</label>
+                <label class="program-selection__label" for="weight">Вес (кг):</label>
                 <input class="program-selection__field-input program-selection__field-input--text" type="text"
                   name="weight" id="weight" required>
               </li>
               <li class="program-selection__field-item">
-                <label for="age">Возраст (лет):</label>
+                <label class="program-selection__label" for="age">Возраст (лет):</label>
                 <input class="program-selection__field-input program-selection__field-input--text" type="text"
                   name="age" id="age" required>
               </li>
             </ul>
           </fieldset>
 
-          <div class="separator"></div>
+          <div class="separator separator--wide separator--hidden"></div>
 
-          <fieldset class="program-selection__form-group container">
+          <fieldset class="program-selection__form-group">
             <ul class="program-selection__field-list program-selection__field-list--radio list">
               <li class="program-selection__field-item">
                 <input class="program-selection__field-input  program-selection__field-input--radio" type="radio"
@@ -104,31 +104,33 @@
             </ul>
           </fieldset>
 
-          <div class="separator"></div>
+          <div class="separator separator--wide separator--hidden"></div>
 
-          <fieldset class="program-selection__form-group program-selection__form-group--contacts container">
-            <legend class="program-selection__form-group-title">Контактные данные (владельца кота)</legend>
+          <fieldset class="program-selection__form-group program-selection__form-group--contacts">
+            <legend class="program-selection__form-group-title program-selection__form-group-title--contacts">Контактные
+              данные (владельца кота)</legend>
             <ul class="program-selection__field-list list">
               <li class="program-selection__field-item">
-                <label for="email">E-mail:</label>
+                <label class="program-selection__label" for="email">E-mail:</label>
                 <input class="program-selection__field-input program-selection__field-input--email" type="email"
                   name="mail" id="email" required>
               </li>
               <li class="program-selection__field-item">
-                <label for="phone">Телефон:</label>
+                <label class="program-selection__label" for="phone">Телефон:</label>
                 <input class="program-selection__field-input program-selection__field-input--tel" type="tel"
                   name="phone" id="phone" required>
               </li>
             </ul>
           </fieldset>
 
-          <fieldset class="program-selection__form-group program-selection__form-group--area container">
-            <legend class="program-selection__form-group-title">Комментарий</legend>
+          <fieldset class="program-selection__form-group program-selection__form-group--area">
+            <legend class="program-selection__form-group-title program-selection__form-group-title--comment">Комментарий
+            </legend>
             <textarea class="program-selection__field-input program-selection__field-input--area" name="comment"
-              id="comment" rows="5" cols="33" required>Расскажите обо всех повадках кота</textarea>
+              id="comment" required>Расскажите обо всех повадках кота</textarea>
           </fieldset>
 
-          <fieldset class="program-selection__form-group container">
+          <fieldset class="program-selection__form-group">
             <legend class="program-selection__form-group-title program-selection__form-group-title--add">Дополнительно
             </legend>
             <ul class="program-selection__field-list program-selection__field-list--add list">
@@ -154,9 +156,9 @@
               </li>
             </ul>
           </fieldset>
-          <div class="container">
+          <div class="button-wrapper">
             <button class="button button--submit" type="submit">Отправить заявку</button>
-            <p class="program-selection__label">* — Обязательные поля</p>
+            <p class="program-selection__info">* — Обязательные поля</p>
           </div>
         </form>
       </div>
@@ -165,30 +167,32 @@
     <!-- Location block -->
     <section class="location">
       <h2 class="visually-hidden">Адрес</h2>
-      <div class="location__wrapper location__wrapper-color container">
-        <div class="location-wrapper">
-          <p class="heading-small location-label">Приглашаем к сотрудничеству дилеров!</p>
-          <address class="location-address">ул. Большая Конюшенная, д. 19/8 Санкт-Петербург</address>
-        </div>
+      <div class="location__wrapper location__wrapper--small">
+        <p class="heading-small location-label">Приглашаем к сотрудничеству дилеров!</p>
+        <address class="location-address">ул. Большая Конюшенная, д. 19/8 Санкт-Петербург</address>
       </div>
-      <div class="map-container">
-        <img class="location__image" src="img/map-mobile.jpg" width="320" height="362"
-          alt="Карта с местоположением 'Кэт энерджи'">
-        <span class="location-map-pin">
+      <div class="map-container map-container--small">
+        <picture>
+          <source media="(min-width: 1440px)" srcset="img/map-desktop.jpg">
+          <source media="(min-width: 768px)" srcset="img/map-tablet.jpg">
+          <img class="location__image" src="img/map-mobile.jpg" alt="Карта с местоположением 'Кэт энерджи'">
+        </picture>
+
+        <!-- <span class="location-map-pin">
           <img class="location__pin" src="img/map-pin.png" width="57" height="53"
             alt="Магазин 'Кэт энерджи' находится здесь">
-        </span>
+        </span> -->
       </div>
     </section>
   </main>
 
   <!-- footer block -->
-  <footer class="main-footer">
-    <div class="main-footer__wrapper container">
+  <footer class="footer">
+    <div class="footer__wrapper container">
       <a class="logo-text footer-logo-text">
         <img class="footer-logo-image" src="img/logo/logo-text.svg" width="128" height="24" alt="Логотип 'Cat Energy'">
       </a>
-      <div class="main-footer__social social">
+      <div class="footer__social social">
         <ul class="social__list list">
           <li class="social__item">
             <a class="social__link social__link--vkontakte" href="https://vk.com/htmlacademy">
@@ -219,7 +223,7 @@
           </li>
         </ul>
       </div>
-      <a class="main-footer__copyright copyright" href="https://htmlacademy.ru/intensive/adaptive">
+      <a class="footer__copyright copyright" href="https://htmlacademy.ru/intensive/adaptive">
         <b class="copyright__text">HTML Academy</b>
         <svg width="27" height="34" viewBox="0 0 27 34" fill="none" xmlns="http://www.w3.org/2000/svg">
           <path
