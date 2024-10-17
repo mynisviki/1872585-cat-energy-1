@@ -55,8 +55,6 @@
     flex-direction: column;
     margin: 0;
   }
-
-  @media (min-width: @desktop-width) {}
 }
 
 .catalog-item__title {
@@ -90,7 +88,7 @@
   font-size: 12px;
   font-weight: 400;
   line-height: 16px;
-  flex: 1 1 0px;
+  flex: 1 1 0;
 
   @media (min-width: @tablet-width) {
     font-size: 16px;
@@ -101,14 +99,13 @@
 
 .catalog-item__image-wrapper {
   display: flex;
-  flex: 1 1 0px;
+  flex: 1 1 0;
   align-items: center;
   justify-content: center;
 
   @media (min-width: @tablet-width) {
     margin-bottom: 41px;
   }
-
 }
 
 .catalog-item__info {

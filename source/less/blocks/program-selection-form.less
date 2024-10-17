@@ -63,7 +63,7 @@
 .program-selection__field-list--pet-info {
   @media (min-width: @desktop-width) {
     flex-direction: column;
-    gap: 0px;
+    gap: 0;
   }
 }
 
@@ -83,6 +83,11 @@
   text-transform: uppercase;
   gap: 13px;
   width: 100%;
+
+  @media (min-width: @tablet-width) {
+    font-size: 20px;
+    line-height: 30px;
+  }
 }
 
 .program-selection__field-item:not(:last-child) {
@@ -111,13 +116,6 @@
   }
 }
 
-.program-selection__field-item {
-  @media (min-width: @tablet-width) {
-    font-size: 20px;
-    line-height: 30px;
-  }
-}
-
 .program-selection__field-input--text,
 .program-selection__field-input--email,
 .program-selection__field-input--tel {
@@ -135,7 +133,7 @@
   @media (min-width: @tablet-width) {
     padding-top: 27px;
     padding-bottom: 27px;
-    outline: 1px solid #E7E7E7;
+    outline: 1px solid @color-special-light-grey;
   }
 
   @media (min-width: @desktop-width) {
@@ -238,7 +236,7 @@
   margin-bottom: 21px;
 
   @media (min-width: @tablet-width) {
-    margin-bottom: 0px;
+    margin-bottom: 0;
   }
 }
 
