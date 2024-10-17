@@ -1,22 +1,13 @@
 .header {
   padding-top: 13px;
-  padding-bottom: 14px;
   position: relative;
 
   @media (min-width: @tablet-width) {
     padding-top: 25px;
-    padding-bottom: 65px;
   }
 
   @media (min-width: @desktop-width) {
     padding-top: 55px;
-    padding-bottom: 29px;
-  }
-}
-
-.header--catalog {
-  @media (min-width: @desktop-width) {
-    padding-bottom: 74px;
   }
 }
 
@@ -24,6 +15,21 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
+  margin-bottom: 14px;
+
+  @media (min-width: @tablet-width) {
+    margin-bottom: 65px;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-bottom: 29px;
+  }
+}
+
+.header__wrapper--catalog {
+  @media (min-width: @desktop-width) {
+    padding-bottom: 74px;
+  }
 }
 
 .header__logo-wrapper {
@@ -57,7 +63,7 @@
 }
 
 .logo-text {
-  
+
   @media (min-width: @desktop-width) {
     width: 118px;
     height: 21px;

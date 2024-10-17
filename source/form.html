@@ -9,10 +9,9 @@
 </head>
 
 <body class="page__body">
-
    <!-- Header -->
-   <header class="header header--catalog">
-    <div class="header__wrapper container">
+   <header class="header container">
+    <div class="header__wrapper header__wrapper--catalog">
       <div class="header__logo-wrapper">
         <a class="header__logo">
           <picture>
@@ -47,25 +46,24 @@
         </ul>
       </nav>
     </div>
+    <div class="separator separator--wide separator--hidden"></div>
   </header>
 
-  <div class="separator separator--catalog"></div>
-
-  <main class="main-container">
+  <main class="main-container container container--small">
     <h1 class="visually-hidden">Кэт энерджи</h1>
 
     <!-- Program selection block -->
     <section class="program-selection">
       <div class="program-selection__wrapper">
-        <h2 class="heading-large program-selection__title container container--small">
+        <h2 class="heading-large program-selection__title">
           Подбор программы
         </h2>
-        <p class="program-selection__text container container--small">
+        <p class="program-selection__text">
           Заполните анкету, и мы подберем
           программу питания для вашего кота
         </p>
         <form class="program-selection__form form" action="https://echo.htmlacademy.ru/" method="post">
-          <fieldset class="program-selection__form-group container container--small">
+          <fieldset class="program-selection__form-group">
             <ul class="program-selection__field-list list">
               <li class="program-selection__field-item">
                 <label class="program-selection__label" for="name">Имя:</label>
@@ -85,9 +83,9 @@
             </ul>
           </fieldset>
 
-          <div class="separator separator--form"></div>
+          <div class="separator separator--wide separator--hidden"></div>
 
-          <fieldset class="program-selection__form-group container container--small">
+          <fieldset class="program-selection__form-group">
             <ul class="program-selection__field-list program-selection__field-list--radio list">
               <li class="program-selection__field-item">
                 <input class="program-selection__field-input  program-selection__field-input--radio" type="radio"
@@ -106,9 +104,9 @@
             </ul>
           </fieldset>
 
-          <div class="separator separator--form"></div>
+          <div class="separator separator--wide separator--hidden"></div>
 
-          <fieldset class="program-selection__form-group program-selection__form-group--contacts container container--small">
+          <fieldset class="program-selection__form-group program-selection__form-group--contacts">
             <legend class="program-selection__form-group-title program-selection__form-group-title--contacts">Контактные данные (владельца кота)</legend>
             <ul class="program-selection__field-list list">
               <li class="program-selection__field-item">
@@ -124,13 +122,13 @@
             </ul>
           </fieldset>
 
-          <fieldset class="program-selection__form-group program-selection__form-group--area container container--small">
+          <fieldset class="program-selection__form-group program-selection__form-group--area">
             <legend class="program-selection__form-group-title program-selection__form-group-title--comment">Комментарий</legend>
             <textarea class="program-selection__field-input program-selection__field-input--area" name="comment"
               id="comment" required>Расскажите обо всех повадках кота</textarea>
           </fieldset>
 
-          <fieldset class="program-selection__form-group container container--small">
+          <fieldset class="program-selection__form-group">
             <legend class="program-selection__form-group-title program-selection__form-group-title--add">Дополнительно
             </legend>
             <ul class="program-selection__field-list program-selection__field-list--add list">
@@ -156,7 +154,7 @@
               </li>
             </ul>
           </fieldset>
-          <div class="button-wrapper container--small">
+          <div class="button-wrapper">
             <button class="button button--submit" type="submit">Отправить заявку</button>
             <p class="program-selection__info">* — Обязательные поля</p>
           </div>
@@ -167,13 +165,11 @@
     <!-- Location block -->
     <section class="location">
       <h2 class="visually-hidden">Адрес</h2>
-      <div class="location__wrapper container">
-        <div class="location-wrapper">
-          <p class="heading-small location-label">Приглашаем к сотрудничеству дилеров!</p>
-          <address class="location-address">ул. Большая Конюшенная, д. 19/8 Санкт-Петербург</address>
-        </div>
+      <div class="location__wrapper location__wrapper--small">
+        <p class="heading-small location-label">Приглашаем к сотрудничеству дилеров!</p>
+        <address class="location-address">ул. Большая Конюшенная, д. 19/8 Санкт-Петербург</address>
       </div>
-      <div class="map-container">
+      <div class="map-container map-container--small">
         <picture>
           <source media="(min-width: 1440px)" srcset="img/map-desktop.jpg">
           <source media="(min-width: 768px)" srcset="img/map-tablet.jpg">

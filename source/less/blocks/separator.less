@@ -5,8 +5,23 @@
 
 }
 
-.separator--catalog,
-.separator--form {
+.separator--wide {
+  width: auto;
+  margin-left: -@container-horizontal-padding;
+  margin-right: -@container-horizontal-padding;
+
+  @media (min-width: @tablet-width) {
+    margin-left: -@container-horizontal-padding-tablet;
+    margin-right: -@container-horizontal-padding-tablet;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-left: -@container-horizontal-padding-desktop;
+    margin-right: -@container-horizontal-padding-desktop;
+  }
+}
+
+.separator--hidden {
   @media (min-width: @tablet-width) {
     display: none;
   }
