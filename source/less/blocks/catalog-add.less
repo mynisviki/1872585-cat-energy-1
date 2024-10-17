@@ -1,6 +1,4 @@
-.catalog-add {
-
-}
+.catalog-add {}
 
 .catalog-add__title {
   .base-heading();
@@ -19,11 +17,16 @@
 }
 
 .catalog-add__container {
-
   @media (min-width: @desktop-width) {
     display: flex;
+    align-items: center;
     gap: 80px;
+    margin-bottom: 87px;
   }
+}
+
+.catalog-add__list-wrapper {
+  flex-grow: 1;
 }
 
 .catalog-add__list {
@@ -33,17 +36,51 @@
   @media (min-width: @tablet-width) {
     margin-bottom: 70px;
   }
+
+  @media (min-width: @desktop-width) {
+    margin-bottom: 0;
+  }
+
 }
 
-.catalog-add__item-wrapper {
-
+.catalog-add__item {
   @media (min-width: @tablet-width) {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
+    padding: 0 37px;
+    border: 1px solid @color-extra-light-grey;
+
+    &:not(:last-child) {
+      border-bottom-width: 0;
+    }
   }
 
   @media (min-width: @desktop-width) {
+    padding-left: 0;
+    padding-right: 0;
+    border-left-width: 0;
+    border-right-width: 0;
+  }
+}
+
+.catalog-add__item-container {
+  padding-bottom: 19px;
+
+  @media (min-width: @tablet-width) {
+    padding-bottom: 28px;
+  }
+
+  @media (min-width: @desktop-width) {
+    display: flex;
+    align-items: flex-end;
+    gap: 40px;
+    padding-top: 15px;
+    padding-bottom: 17px;
+  }
+}
+
+.catalog-add__item-wrapper {
+  flex-grow: 1;
+
+  @media (min-width: @tablet-width) {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -66,6 +103,11 @@
     margin-top: 26px;
     margin-bottom: 25px;
   }
+
+  @media (min-width: @desktop-width) {
+    margin-top: 0;
+    margin-bottom: 0;
+  }
 }
 
 .catalog-add__info {
@@ -82,15 +124,15 @@
     line-height: 20px;
     width: auto;
   }
+
+  @media (min-width: @desktop-width) {
+    margin-top: 0;
+    margin-bottom: 0;
+  }
 }
 
 .catalog-add__button {
-  margin-bottom: 19px;
-
-  @media (min-width: @tablet-width) {
-    margin-bottom: 28px;
-    ;
-  }
+  flex-basis: 244px;
 }
 
 .catalog-add__key {
@@ -129,7 +171,8 @@
   }
 
   @media (min-width: @desktop-width) {
-    width: 245px;
+    width: 205px;
+    margin-bottom: 0;
   }
 }
 
