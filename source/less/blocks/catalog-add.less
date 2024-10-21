@@ -37,6 +37,12 @@
 
   @media (min-width: @desktop-width) {
     margin-bottom: 0;
+    display: grid;
+    grid-template-columns: 276px 203px 1fr 244px;
+    column-gap: 40px;
+    row-gap: 16px;
+    align-items: center;
+    justify-items: start;
   }
 }
 
@@ -130,10 +136,19 @@
 
 .catalog-add__button {
   flex-basis: 244px;
+
+  @media (min-width: @desktop-width) {
+    box-sizing: border-box;
+    width: 100%;
+  }
 }
 
 .catalog-add__key {
   padding-right: 55px;
+
+  @media (min-width: @desktop-width) {
+    padding-right: 0;
+  }
 }
 
 .catalog-add__value {
@@ -198,5 +213,25 @@
   @media (min-width: @tablet-width) and (max-width: @desktop-width) {
     margin-right: 125px;
     text-align: left;
+  }
+}
+
+.catalog-add__item,
+.catalog-add__item-container,
+.catalog-add__item-wrapper,
+.catalog-add__info,
+.catalog-add__table-body,
+.catalog-add__row {
+  @media (min-width: @desktop-width) {
+    display: contents;
+  }
+}
+
+.catalog-add__separator {
+  display: none;
+
+  @media (min-width: @desktop-width) {
+    display: block;
+    grid-column: 1 / -1;
   }
 }
