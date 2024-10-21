@@ -98,6 +98,17 @@
   }
 }
 
+.map-size {
+  display: block;
+  border: none;
+  height: 362px;
+
+  @media (min-width: @tablet-width) {
+    height: 400px;
+
+  }
+}
+
 .map-container--small {
   @media (min-width: @tablet-width) {
     margin-left: -@container-horizontal-padding-tablet-small;
@@ -114,4 +125,14 @@
   position: absolute;
   top: 38%;
   left: 42%;
+
+  @media (min-width: @tablet-width) {
+    top: 38%;
+    left: 42%;
+  }
+
+  @media (min-width: @desktop-width) {
+    top: 25%;
+    left: 46%;
+  }
 }

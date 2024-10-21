@@ -164,17 +164,26 @@
         <address class="location-address">ул. Большая Конюшенная, д. 19/8 Санкт-Петербург</address>
       </div>
       <div class="map-container">
+        <h2 class="visually-hidden">Как до нас добраться</h2>
+        <iframe class="map-size"
+         src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1998.6037999040354!2d30.322010416394033!3d59.938716271971415!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca5ba729%3A0xea9c53d4493c879f!2sBolshaya+Konyushennaya+ul.%2C+19%2C+Sankt-Peterburg%2C+Russia%2C+191186!5e0!3m2!1sen!2s!4v1441888483426"
+          width="100%"
+          allowfullscreen
+          title="Офис компании по адресу набережная реки Карповки, 5, литера П, Санкт-Петербург"
+        ></iframe>
 
-        <picture>
+        <!-- <picture>
           <source media="(min-width: 1440px)" srcset="img/map-desktop.jpg">
           <source media="(min-width: 768px)" srcset="img/map-tablet.jpg">
           <img class="location__image" src="img/map-mobile.jpg" alt="Карта с местоположением 'Кэт энерджи'">
-        </picture>
+        </picture> -->
 
-        <!-- <span class="location-map-pin">
-          <img class="location__pin" src="img/map-pin.png" width="57" height="53"
-            alt="Магазин 'Кэт энерджи' находится здесь">
-        </span> -->
+        <span class="location-map-pin">
+            <picture>
+              <source media="(min-width: 768px)" srcset="img/map-pin-tablet-desktop.png">
+              <img class="location__pin" src="img/map-pin-mobile.png"  alt="Магазин 'Кэт энерджи' находится здесь">
+            </picture>
+        </span>
       </div>
     </section>
   </main>
