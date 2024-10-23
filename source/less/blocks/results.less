@@ -186,7 +186,7 @@
   background-color: @color-middle-grey;
 
   @media (min-width: @desktop-width) {
-    background-color: white;
+    background-color: @color-white;
   }
 }
 
@@ -213,7 +213,7 @@
   position: absolute;
   width: 4px;
   height: 100%;
-  top: 0px;
+  top: 0;
   left: calc(50% - 2px);
   background-color: currentColor;
   color: #666666;
@@ -223,11 +223,11 @@
 }
 
 .before-after-slider__drag-bar:hover {
-  color: #68B738;
+  color: @color-basic-green;
 }
 
 .before-after-slider__drag-bar:active {
-  color: #5EAA2F;
+  color: @color-extra-green;
 }
 
 .before-after-slider__drag-bar-circle {
@@ -238,7 +238,7 @@
   width: 40px;
   height: 40px;
   text-align: center;
-  background-color: white;
+  background-color: @color-white;
   border: 4px currentColor solid;
   color: currentColor;
   box-sizing: border-box;
