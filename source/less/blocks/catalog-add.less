@@ -171,6 +171,10 @@
   padding-left: @container-horizontal-padding;
   padding-right: @container-horizontal-padding;
 
+  @media (min-resolution: 2dppx) {
+    background-image: url("../../img/add-image@2x.jpg");
+  }
+
   @media (min-width: @tablet-width) and (max-width: @desktop-width) {
     flex-direction: row;
     background-size: 707px 200px;
@@ -180,6 +184,10 @@
     justify-content: space-between;
     padding-left: @container-horizontal-padding-tablet;
     padding-right: @container-horizontal-padding-tablet;
+
+    @media (min-resolution: 2dppx) {
+      background-image: url("../../img/add-image-tablet@2x.jpg");
+    }
   }
 
   @media (min-width: @desktop-width) {
