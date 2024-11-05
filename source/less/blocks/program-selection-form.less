@@ -148,24 +148,19 @@
   margin-bottom: 26px;
   padding: 0;
   text-align: left;
+  position: relative;
 
   @media (min-width: @tablet-width) {
     font-size: 36px;
     line-height: 36px;
   }
-}
 
-.program-selection__form-group-title {
-  position: relative;
-  margin: 0;
-  padding: 0;
-}
-
-.program-selection__form-group-title::before,
-.program-selection__form-group-title::after {
-  content: '';
-  position: absolute;
-  border-top: solid 2px @color-basic-green;
+  &::before,
+  &::after {
+    content: " ";
+    position: absolute;
+    border-top: solid 2px @color-basic-green;
+  }
 }
 
 .program-selection__form-group-title--contacts {
