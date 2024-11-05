@@ -40,11 +40,6 @@
   }
 }
 
-.program-selection__form-group {
-  margin: 0 auto;
-  padding: 0;
-}
-
 .program-selection__field-list {
   margin: 0;
   padding: 0;
@@ -152,10 +147,19 @@
   line-height: 26px;
   margin-bottom: 26px;
   padding: 0;
+  text-align: left;
+  position: relative;
 
   @media (min-width: @tablet-width) {
     font-size: 36px;
     line-height: 36px;
+  }
+
+  &::before,
+  &::after {
+    content: " ";
+    position: absolute;
+    border-top: solid 2px @color-basic-green;
   }
 }
 
@@ -165,10 +169,24 @@
   }
 }
 
+.program-selection__form-group-title--contacts::after {
+  border-top: solid 2px @color-basic-green;
+  top: 30%;
+  left: 226px;
+  width: 93px;
+}
+
 .program-selection__form-group-title--comment {
   @media (min-width: @tablet-width) {
     margin-bottom: 87px;
   }
+}
+
+.program-selection__form-group-title--comment::after {
+  border-top: solid 2px @color-basic-green;
+  top: 30%;
+  left: 226px;
+  width: 159px;
 }
 
 
