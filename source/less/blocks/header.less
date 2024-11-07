@@ -47,6 +47,14 @@
   }
 }
 
+.header__logo-wrapper:hover {
+  opacity: 80%;
+}
+
+.header__logo-wrapper:active {
+  opacity: 60%;
+}
+
 .header__logo-image {
   width: 33px;
   height: 38px;
@@ -132,6 +140,7 @@
   display: block;
   width: 100%;
   border-top: 1px solid @color-extra-grey;
+  padding-bottom: 8px;
 
   &:last-child {
     border-bottom: 1px solid @color-extra-grey;
@@ -163,6 +172,14 @@
   }
 }
 
+.site-list__href:hover {
+  opacity: 60%;
+}
+
+.site-list__href:active {
+  opacity: 30%;
+}
+
 .site-list__href--catalog {
   @media (min-width: @desktop-width) {
     color: @color-extra-black;
@@ -170,3 +187,5 @@
     line-height: 30px;
   }
 }
+
+
