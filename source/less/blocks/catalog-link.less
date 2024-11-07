@@ -8,10 +8,28 @@
   line-height: 16px;
   text-transform: uppercase;
   gap: 15px;
+  cursor: pointer;
 
   @media (min-width: @tablet-width) {
     font-size: 20px;
     line-height: 30px;
     gap: 25px;
   }
+}
+
+.catalog-link:hover {
+  .right-arrow {
+    content: "";
+    width: 32px;
+    height: 10px;
+    display: inline-block;
+    background-image: url("../../img/icon/right-arrow-long.svg");
+    background-repeat: no-repeat;
+    background-position: center right;
+    border: none;
+  }
+}
+
+.catalog-link:active {
+  opacity: 30%;
 }
