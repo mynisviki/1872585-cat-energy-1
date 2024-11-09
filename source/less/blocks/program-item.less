@@ -5,7 +5,7 @@
   line-height: 37px;
   text-align: center;
   margin-top: 0;
-  margin-bottom: 29px;
+  margin-bottom: 0;
   text-transform: uppercase;
 
   @media (min-width: @tablet-width) {
@@ -19,6 +19,13 @@
   }
 }
 
+.program-item__title {
+
+  @media (min-width: @tablet-width) {
+    margin-bottom: 0px;
+  }
+}
+
 .program-item__icon {
   display: block;
   background-position: center;
@@ -29,7 +36,6 @@
   width: 50px;
   height: 53px;
   margin-right: 20px;
-  margin-bottom: 20px;
 
   @media (min-width: @tablet-width) {
     background-image: url("../../img/cat-sit-icon-tablet.svg");
@@ -46,7 +52,7 @@
     width: 100px;
     height: 106px;
     margin-right: 62px;
-    margin-bottom: 39px;
+    position: static;
     top: 41px;
     left: 52px;
   }
@@ -57,6 +63,7 @@
   width: 67px;
   height: 50px;
   margin-right: 11px;
+  margin-left: -7px;
 
   @media (min-width: @tablet-width) {
     background-image: url("../../img/cat-walk-icon-tablet.svg");
@@ -73,9 +80,9 @@
     width: 134px;
     height: 100px;
     margin-right: 47px;
-    margin-bottom: 39px;
-    top: 47px;
-    left: 33px;
+    position: static;
+    margin-left: -19px;
+    margin-top: 6px;
   }
 }
 
@@ -93,7 +100,6 @@
   }
 
   @media (min-width: @desktop-width) {
-    max-width: 451px;
     margin-bottom: 23px;
   }
 }
@@ -102,7 +108,7 @@
   content: "";
   display: block;
   height: 1px;
-  margin-top: 23px;
+  margin-top: 22px;
   background: @color-light-grey;
 
   @media (min-width: @tablet-width) {

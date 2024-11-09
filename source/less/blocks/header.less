@@ -77,6 +77,16 @@
   }
 }
 
+.logo-text-image {
+  width: 101px;
+  height: 18px;
+
+  @media (min-width: @desktop-width) {
+    width: 118px;
+    height: 21px;
+  }
+}
+
 .burger-menu-button {
   content: "";
   width: 24px;
@@ -118,6 +128,8 @@
   @media (min-width: @tablet-width) {
     display: flex;
     position: static;
+    padding-right: 4px;
+    padding-top: 9px;
     flex-direction: row;
     white-space: nowrap;
     gap: 33px;
@@ -128,6 +140,9 @@
   @media (min-width: @desktop-width) {
     background-color: transparent;
     position: relative;
+    font-size: 20px;
+    line-height: 30px;
+    padding-right: 0;
   }
 }
 
@@ -152,6 +167,10 @@
     &:last-child {
       border: none;
     }
+  }
+
+  @media (min-width: @desktop-width) {
+    padding-bottom: 6px;
   }
 }
 
@@ -187,5 +206,3 @@
     line-height: 30px;
   }
 }
-
-
