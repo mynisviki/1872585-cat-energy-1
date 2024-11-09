@@ -71,6 +71,12 @@
 }
 
 .logo-text {
+  margin-left: -8px;
+
+  @media (min-width: @tablet-width) {
+    margin-left: 0;
+  }
+  
   @media (min-width: @desktop-width) {
     width: 118px;
     height: 21px;
@@ -149,6 +155,7 @@
 
 .main-nav__list--shown {
   display: flex;
+  padding-bottom: 14px;
 }
 
 
@@ -189,6 +196,11 @@
 
   @media (min-width: @desktop-width) {
     color: @color-white;
+  }
+
+  .main-nav__list--shown & {
+    padding-top: 36px;
+    padding-bottom: 1px;
   }
 }
 
