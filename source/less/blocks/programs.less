@@ -1,8 +1,11 @@
 .programs-list__wrapper {
   display: flex;
+  align-items: center;
+  margin-bottom: 22px;
 
   @media (min-width: @desktop-width) {
-    flex-direction: column;
+    align-items: center;
+    margin-bottom: 39px;
   }
 }
 
@@ -18,14 +21,12 @@
   @media (min-width: @desktop-width) {
     display: flex;
     gap: 80px;
-    margin-top: 266px;
   }
 }
 
 .programs-list__item {
   background-color: @color-basic-grey;
-  padding: 20px;
-
+  padding: 21px 20px 18px;
 
   @media (min-width: @tablet-width) {
     .heading-large();
@@ -34,13 +35,30 @@
   }
 
   @media (min-width: @desktop-width) {
-    max-width: 570px;
-    padding: 77px 67px 55px 52px;
+    width: 570px;
+    box-sizing: border-box;
+    padding: 40px 50px 82px 52px;
+  }
+}
+
+.programs-list__item_big {
+  padding: 24px 20px 18px;
+
+  @media (min-width: @tablet-width) {
+    padding: 77px 316px 53px 52px;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding: 40px 67px 82px 52px;
   }
 }
 
 .programs-list__item:not(:last-child) {
   margin-bottom: 20px;
+
+  @media (min-width: @tablet-width) {
+    margin-bottom: 30px;
+  }
 
   @media (min-width: @desktop-width) {
     margin-bottom: 0;

@@ -1,0 +1,13 @@
+.is-active {
+  border-bottom: 2px solid @color-basic-green;
+
+  @media (min-width: @desktop-width) {
+    &.is-active--white {
+      border-bottom-color: @color-white;
+    }
+  }
+
+  .main-nav__list--shown & {
+    border-bottom-width: 0;
+  }
+}
