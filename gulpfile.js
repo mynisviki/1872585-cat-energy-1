@@ -69,7 +69,7 @@ export const copyFonts = () => {
   return gulp.src(
     [
       'source/fonts/**/*.{woff,woff2}',
-      'source/*.ico',
+      'source/favicon.ico',
       'source/manifest.webmanifest'
     ],
     { base: 'source' })
