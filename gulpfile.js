@@ -69,7 +69,8 @@ export const copyFonts = () => {
   return gulp.src(
     [
       'source/fonts/**/*.{woff,woff2}',
-      'source/*.ico'
+      'source/*.ico',
+      'source/manifest.webmanifest'
     ],
     { base: 'source' })
     .pipe(gulp.dest('build'))
@@ -110,7 +111,7 @@ export const build =
     )
   )
 
-export default   gulp.series(
+export default gulp.series(
   clean,
   gulp.parallel(
     html, copyFonts, copyImages, sprite, createWebp, styles
