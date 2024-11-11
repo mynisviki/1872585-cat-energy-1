@@ -32,7 +32,7 @@
         </a>
       </div>
       <nav class="main-nav">
-        <!-- Когда меню показано, то у кнопки добавляется класс burger-menu-button--close, а у ul добавляется класс main-nav__list--shown -->
+        <!-- Когда меню показано, то у кнопки добавляется класс burger-menu-button_close, а у ul добавляется класс main-nav__list_shown -->
         <button class="burger-menu-button" type="button" aria-label="Toggle меню"></button>
         <ul class="main-nav__list site-list list">
           <li class="site-list__item is-active is-active--white">
@@ -123,7 +123,8 @@
             <p class="work-principle__text">Замените один-два приема обычной еды на наше функциональное питание.</p>
           </li>
           <li class="work-principle__item work-principle__item--icon work-principle__item--icon-alarm">
-            <p class="work-principle__text">Уже через месяц наслаждайтесь изменениями к <span class="work-principle__text--tablet-last-text">лучшему</span> вашего питомца!
+            <p class="work-principle__text">Уже через месяц наслаждайтесь изменениями к <span
+                class="work-principle__text--tablet-last-text">лучшему</span> вашего питомца!
             </p>
           </li>
         </ul>
@@ -175,6 +176,7 @@
             </div>
           </div>
         </div>
+      </div>
     </section>
 
     <!-- Location block -->
@@ -182,14 +184,16 @@
       <h2 class="visually-hidden">Адрес</h2>
       <div class="location__wrapper location__wrapper--light">
         <p class="heading-small location-label">Приглашаем <br> к сотрудничеству дилеров!</p>
-        <address class="location-address"><span class="location-address--street"></span>ул. Большая Конюшенная, д. 19/8
-          </span> <span class="location-address--city">Санкт-Петербург</span></address>
+        <address class="location-address">
+          <span class="location-address--street">ул. Большая Конюшенная, д. 19/8</span>
+          <span class="location-address--city">Санкт-Петербург</span>
+        </address>
       </div>
       <div class="map-container">
         <h2 class="visually-hidden">Как до нас добраться</h2>
         <iframe class="map-size"
           src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1998.6037999040354!2d30.322010416394033!3d59.938716271971415!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca5ba729%3A0xea9c53d4493c879f!2sBolshaya+Konyushennaya+ul.%2C+19%2C+Sankt-Peterburg%2C+Russia%2C+191186!5e0!3m2!1sen!2s!4v1441888483426"
-          width="100%" allowfullscreen
+          allowfullscreen
           title="Офис компании по адресу набережная реки Карповки, 5, литера П, Санкт-Петербург"></iframe>
 
         <span class="location-map-pin">
@@ -206,8 +210,8 @@
   <footer class="footer">
     <div class="footer__wrapper container">
       <a class="logo-text footer-logo-text">
-        <svg class="footer-logo-image" alt="Логотип 'Cat Energy'" width="128" height="24">
-        <use href="img/sprite.svg#icon-logo"></use>
+        <svg class="footer-logo-image" width="128" height="24">
+          <use href="img/sprite.svg#icon-logo"></use>
         </svg>
       </a>
       <div class="footer__social social">
