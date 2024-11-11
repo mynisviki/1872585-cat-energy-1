@@ -7,13 +7,13 @@ import autoprefixer from 'autoprefixer';
 import browser from 'browser-sync';
 import rename from 'gulp-rename';
 import htmlmin from 'gulp-htmlmin';
-import imagemin, { optipng, mozjpeg, svgo } from "gulp-imagemin";
+import imagemin, { optipng, mozjpeg, svgo } from 'gulp-imagemin';
 import { deleteAsync } from 'del';
 import webp from 'gulp-webp';
 import svgstore from 'gulp-svgstore';
 
 export const clean = async () => {
-  return await deleteAsync("build", { force: true });
+  return await deleteAsync('build', { force: true });
 }
 
 // Styles
@@ -78,9 +78,9 @@ export const copyFonts = () => {
 
 // Webp
 export const createWebp = () => {
-  return gulp.src("source/img/**/*.{jpg,png}")
+  return gulp.src('source/img/**/*.{jpg,png}')
     .pipe(webp({ quality: 90 }))
-    .pipe(gulp.dest("build/img"));
+    .pipe(gulp.dest('build/img'));
 }
 
 // Server
