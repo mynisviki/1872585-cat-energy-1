@@ -30,7 +30,7 @@
   @media (min-width: @desktop-width) {
     box-sizing: border-box;
     display: grid;
-    column-gap: 224px;
+    column-gap: 228px;
     grid-template-columns: 432px 1fr;
     grid-template-areas:
       "title         image"
@@ -149,8 +149,7 @@
     width: calc(100% + @container-horizontal-padding-tablet * 2);
     display: flex;
     justify-content: center;
-    margin-top: 100px;
-    padding-bottom: 100px;
+    padding-bottom: 102px;
   }
 
   @media (min-width: @desktop-width) {
@@ -203,6 +202,7 @@
   width: 280px;
   max-width: 280px;
   height: 256px;
+  object-fit: cover;
 
   @media (min-width: @tablet-width) {
     width: 560px;
