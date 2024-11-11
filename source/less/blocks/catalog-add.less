@@ -241,7 +241,7 @@
     background-image: url("../img/add-image@2x.jpg");
   }
 
-  @media (min-width: @tablet-width) and (max-width: @desktop-width) {
+  @media (min-width: @tablet-width) and (max-width: (@desktop-width - 1)) {
     flex-direction: row;
     background-size: 707px 200px;
     background-image: url("../img/add-image-tablet.jpg");
@@ -271,7 +271,7 @@
   background-image: url("../img/icon/icon-gift.svg");
   background-repeat: no-repeat;
 
-  @media (min-width: @tablet-width) and (max-width: @desktop-width) {
+  @media (min-width: @tablet-width) and (max-width: (@desktop-width - 1)) {
     margin-left: 49px;
   }
 }
@@ -286,7 +286,7 @@
   margin: 0;
   text-align: center;
 
-  @media (min-width: @tablet-width) and (max-width: @desktop-width) {
+  @media (min-width: @tablet-width) and (max-width: (@desktop-width - 1)) {
     margin-right: 95px;
     margin-top: 6px;
     text-align: left;
