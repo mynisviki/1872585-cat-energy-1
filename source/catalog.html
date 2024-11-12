@@ -19,7 +19,7 @@
 
   <!-- Header -->
   <header class="header container">
-    <div class="header__wrapper header__wrapper--catalog">
+    <div class="header__wrapper header__wrapper_static header__wrapper--catalog">
       <div class="header__logo-wrapper">
         <a class="header__logo">
           <picture>
@@ -33,15 +33,17 @@
         </a>
       </div>
       <nav class="main-nav">
-        <!-- Когда меню показано, то у кнопки добавляется класс burger-menu-button_close, а у ul добавляется класс main-nav__list_shown -->
+        <!-- Меню статично по умолчанию, есть класс header__wrapper_static -->
+        <!-- Когда меню показано через JS, то удаляется класс header__wrapper_static, у кнопки добавляется класс burger-menu-button_close, а у ul добавляется класс main-nav__list_shown -->
+        <!-- Когда меню скрыто через JS, то удаляется класс header__wrapper_static, у кнопки добавляется класс burger-menu-button_open, а у ul добавляется класс main-nav__list_hidden -->
         <button class="burger-menu-button" type="button" aria-label="Toggle меню"></button>
-        <ul class="main-nav__list site-list list">
+        <ul class="main-nav__list site-list">
           <li class="site-list__item site-list__item--catalog">
             <a class="site-list__href site-list__href--catalog" href="index.html">
               Главная
             </a>
           </li>
-          <li class="site-list__item site-list__item--catalog is-active">
+          <li class="site-list__item site-list__item--catalog site-list__item_active">
             <a class="site-list__href site-list__href--catalog" href="catalog.html">
               Каталог продукции
             </a>
@@ -73,7 +75,11 @@
             <div class="catalog-list__item-container">
               <div class="catalog-item__wrapper">
                 <picture class="catalog-item__image-wrapper">
-                  <source media="(min-width: 768px)" srcset="img/chicken-500-tablet-desktop.png">
+                  <source media="(min-width: 1440px)" type="image/webp" srcset="img/chicken-500-desktop.webp">
+                  <source media="(min-width: 1440px)" srcset="img/chicken-500-desktop.png">
+                  <source media="(min-width: 768px)" type="image/webp" srcset="img/chicken-500-tablet.webp">
+                  <source media="(min-width: 768px)" srcset="img/chicken-500-tablet.png">
+                  <source type="image/webp" srcset="img/chicken-500.webp">
                   <img class="catalog-item__image" src="img/chicken-500.png"
                     alt="Cat Energy PRO 500 грамм со вкусом курицы">
                 </picture>
@@ -106,7 +112,11 @@
             <div class="catalog-list__item-container">
               <div class="catalog-item__wrapper">
                 <picture class="catalog-item__image-wrapper catalog-item__image-wrapper--big">
-                  <source media="(min-width: 768px)" srcset="img/chicken-1000-tablet-desktop.png">
+                  <source media="(min-width: 1440px)" type="image/webp" srcset="img/chicken-1000-desktop.webp">
+                  <source media="(min-width: 1440px)" srcset="img/chicken-1000-desktop.png">
+                  <source media="(min-width: 768px)" type="image/webp" srcset="img/chicken-1000-tablet.webp">
+                  <source media="(min-width: 768px)" srcset="img/chicken-1000-tablet.png">
+                  <source type="image/webp" srcset="img/chicken-1000.webp">
                   <img class="catalog-item__image" src="img/chicken-1000.png"
                     alt="Cat Energy PRO 1000 грамм со вкусом курицы">
                 </picture>
@@ -139,7 +149,11 @@
             <div class="catalog-list__item-container">
               <div class="catalog-item__wrapper">
                 <picture class="catalog-item__image-wrapper">
-                  <source media="(min-width: 768px)" srcset="img/fish-500-tablet-desktop.png">
+                  <source media="(min-width: 1440px)" type="image/webp" srcset="img/fish-500-desktop.webp">
+                  <source media="(min-width: 1440px)" srcset="img/fish-500-desktop.png">
+                  <source media="(min-width: 768px)" type="image/webp" srcset="img/fish-500-tablet.webp">
+                  <source media="(min-width: 768px)" srcset="img/fish-500-tablet.png">
+                  <source type="image/webp" srcset="img/fish-500.webp">
                   <img class="catalog-item__image" src="img/fish-500.png" alt="Cat Energy PRO 500 грамм со вкусом рыбы">
                 </picture>
                 <div class="catalog-item__content">
@@ -171,7 +185,11 @@
             <div class="catalog-list__item-container">
               <div class="catalog-item__wrapper">
                 <picture class="catalog-item__image-wrapper catalog-item__image-wrapper--big">
-                  <source media="(min-width: 768px)" srcset="img/fish-1000-tablet-desktop.png">
+                  <source media="(min-width: 1440px)" type="image/webp" srcset="img/fish-1000-desktop.webp">
+                  <source media="(min-width: 1440px)" srcset="img/fish-1000-desktop.png">
+                  <source media="(min-width: 768px)" type="image/webp" srcset="img/fish-1000-tablet.webp">
+                  <source media="(min-width: 768px)" srcset="img/fish-1000-tablet.png">
+                  <source type="image/webp" srcset="img/fish-1000.webp">
                   <img class="catalog-item__image" src="img/fish-1000.png"
                     alt="Cat Energy PRO 1000 грамм со вкусом рыбы">
                 </picture>
@@ -204,7 +222,11 @@
             <div class="catalog-list__item-container">
               <div class="catalog-item__wrapper">
                 <picture class="catalog-item__image-wrapper">
-                  <source media="(min-width: 768px)" srcset="img/buckwheat-500-tablet-desktop.png">
+                  <source media="(min-width: 1440px)" type="image/webp" srcset="img/buckwheat-500-desktop.webp">
+                  <source media="(min-width: 1440px)" srcset="img/buckwheat-500-desktop.png">
+                  <source media="(min-width: 768px)" type="image/webp" srcset="img/buckwheat-500-tablet.webp">
+                  <source media="(min-width: 768px)" srcset="img/buckwheat-500-tablet.png">
+                  <source type="image/webp" srcset="img/buckwheat-500.webp">
                   <img class="catalog-item__image" src="img/buckwheat-500.png"
                     alt="Cat Energy SLIM 500 грамм со вкусом гречки">
                 </picture>
@@ -237,7 +259,11 @@
             <div class="catalog-list__item-container">
               <div class="catalog-item__wrapper">
                 <picture class="catalog-item__image-wrapper catalog-item__image-wrapper--big">
-                  <source media="(min-width: 768px)" srcset="img/buckwheat-1000-tablet-desktop.png">
+                  <source media="(min-width: 1440px)" type="image/webp" srcset="img/buckwheat-1000-desktop.webp">
+                  <source media="(min-width: 1440px)" srcset="img/buckwheat-1000-desktop.png">
+                  <source media="(min-width: 768px)" type="image/webp" srcset="img/buckwheat-1000-tablet.webp">
+                  <source media="(min-width: 768px)" srcset="img/buckwheat-1000-tablet.png">
+                  <source type="image/webp" srcset="img/buckwheat-1000.webp">
                   <img class="catalog-item__image" src="img/buckwheat-1000.png"
                     alt="Cat Energy SLIM 1000 грамм со вкусом гречки">
                 </picture>
@@ -270,7 +296,11 @@
             <div class="catalog-list__item-container">
               <div class="catalog-item__wrapper">
                 <picture class="catalog-item__image-wrapper">
-                  <source media="(min-width: 768px)" srcset="img/rice-500-tablet-desktop.png">
+                  <source media="(min-width: 1440px)" type="image/webp" srcset="img/rice-500-desktop.webp">
+                  <source media="(min-width: 1440px)" srcset="img/rice-500-desktop.png">
+                  <source media="(min-width: 768px)" type="image/webp" srcset="img/rice-500-tablet.webp">
+                  <source media="(min-width: 768px)" srcset="img/rice-500-tablet.png">
+                  <source type="image/webp" srcset="img/rice-500.webp">
                   <img class="catalog-item__image" src="img/rice-500.png"
                     alt="Cat Energy SLIM 500 грамм со вкусом риса">
                 </picture>
@@ -413,8 +443,8 @@
       <div class="location__wrapper location__wrapper--light">
         <p class="heading-small location-label">Приглашаем <br> к сотрудничеству дилеров!</p>
         <address class="location-address">
-          <span class="location-address--street">ул. Большая Конюшенная, д. 19/8</span>
-          <span class="location-address--city">Санкт-Петербург</span>
+          <span>ул. Большая Конюшенная, д. 19/8</span>
+          <span class="location-address__city">Санкт-Петербург</span>
         </address>
       </div>
       <div class="map-container">

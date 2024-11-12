@@ -18,7 +18,7 @@
 <body class="page__body">
   <!-- Header -->
   <header class="header container">
-    <div class="header__wrapper">
+    <div class="header__wrapper header__wrapper_static">
       <div class="header__logo-wrapper">
         <a class="header__logo">
           <picture>
@@ -32,10 +32,12 @@
         </a>
       </div>
       <nav class="main-nav">
-        <!-- Когда меню показано, то у кнопки добавляется класс burger-menu-button_close, а у ul добавляется класс main-nav__list_shown -->
-        <button class="burger-menu-button burger-menu-button_close" type="button" aria-label="Toggle меню"></button>
-        <ul class="main-nav__list site-list list main-nav__list_shown">
-          <li class="site-list__item is-active is-active--white">
+        <!-- Меню статично по умолчанию, есть класс header__wrapper_static -->
+        <!-- Когда меню показано через JS, то удаляется класс header__wrapper_static, у кнопки добавляется класс burger-menu-button_close, а у ul добавляется класс main-nav__list_shown -->
+        <!-- Когда меню скрыто через JS, то удаляется класс header__wrapper_static, у кнопки добавляется класс burger-menu-button_open, а у ul добавляется класс main-nav__list_hidden -->
+        <button class="burger-menu-button" type="button" aria-label="Toggle меню"></button>
+        <ul class="main-nav__list site-list">
+          <li class="site-list__item site-list__item_active site-list__item_white">
             <a class="site-list__href" href="index.html">
               Главная
             </a>
@@ -124,7 +126,7 @@
           </li>
           <li class="work-principle__item work-principle__item--icon work-principle__item--icon-alarm">
             <p class="work-principle__text">Уже через месяц наслаждайтесь изменениями к <span
-                class="work-principle__text--tablet-last-text">лучшему</span> вашего питомца!
+                class="work-principle__brake-text">лучшему</span> вашего питомца!
             </p>
           </li>
         </ul>
@@ -185,8 +187,8 @@
       <div class="location__wrapper location__wrapper--light">
         <p class="heading-small location-label">Приглашаем <br> к сотрудничеству дилеров!</p>
         <address class="location-address">
-          <span class="location-address--street">ул. Большая Конюшенная, д. 19/8</span>
-          <span class="location-address--city">Санкт-Петербург</span>
+          <span>ул. Большая Конюшенная, д. 19/8</span>
+          <span class="location-address__city">Санкт-Петербург</span>
         </address>
       </div>
       <div class="map-container">

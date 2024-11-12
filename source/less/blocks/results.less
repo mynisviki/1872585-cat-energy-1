@@ -40,6 +40,11 @@
     margin-left: -110px;
     width: calc(100% + @container-horizontal-padding-desktop * 2);
     padding: 0 110px;
+    background-color: @color-basic-grey;
+    background-repeat: no-repeat;
+    background-image: linear-gradient(to right, @color-white, @color-white);
+    background-position: 0 0;
+    background-size: 100% 134px;
   }
 }
 
@@ -145,6 +150,10 @@
   justify-self: center;
 
   @media (min-width: @tablet-width) {
+    background-repeat: no-repeat;
+    background-image: linear-gradient(to right, @color-white, @color-white);
+    background-position: 0 0;
+    background-size: 100% 152px;
     background-color: @color-middle-grey;
     width: calc(100% + @container-horizontal-padding-tablet * 2);
     display: flex;
@@ -153,12 +162,12 @@
   }
 
   @media (min-width: @desktop-width) {
-    background-color: transparent;
     padding-bottom: 0;
     width: auto;
     margin-top: 0;
     margin-left: 0;
     margin-right: auto;
+    background-color: @color-basic-grey;
   }
 }
 
@@ -184,8 +193,16 @@
   overflow: hidden;
   background-color: @color-middle-grey;
 
+  @media (min-width: @tablet-width) {
+    background-repeat: no-repeat;
+    background-image: linear-gradient(to right, @color-white, @color-white);
+    background-position: 0 0;
+    background-size: 100% 152px;
+  }
+
   @media (min-width: @desktop-width) {
-    background-color: @color-white;
+    background-color: @color-basic-grey;
+    background-size: 100% 134px;
   }
 }
 
