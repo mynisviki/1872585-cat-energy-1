@@ -19,7 +19,7 @@
 
   <!-- Header -->
   <header class="header container">
-    <div class="header__wrapper header__wrapper--catalog">
+    <div class="header__wrapper header__wrapper_static header__wrapper--catalog">
       <div class="header__logo-wrapper">
         <a class="header__logo">
           <picture>
@@ -33,9 +33,11 @@
         </a>
       </div>
       <nav class="main-nav">
-        <!-- Когда меню показано, то у кнопки добавляется класс burger-menu-button_close, а у ul добавляется класс main-nav__list_shown -->
+        <!-- Меню статично по умолчанию, есть класс header__wrapper_static -->
+        <!-- Когда меню показано через JS, то удаляется класс header__wrapper_static, у кнопки добавляется класс burger-menu-button_close, а у ul добавляется класс main-nav__list_shown -->
+        <!-- Когда меню скрыто через JS, то удаляется класс header__wrapper_static, у кнопки добавляется класс burger-menu-button_open, а у ul добавляется класс main-nav__list_hidden -->
         <button class="burger-menu-button" type="button" aria-label="Toggle меню"></button>
-        <ul class="main-nav__list site-list list">
+        <ul class="main-nav__list site-list">
           <li class="site-list__item site-list__item--catalog">
             <a class="site-list__href site-list__href--catalog" href="index.html">
               Главная
