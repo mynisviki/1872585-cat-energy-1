@@ -1,58 +1,65 @@
-.catalog-add__title {
-  .base-heading();
-
+.catalog-add__title-wrapper {
   position: relative;
-  font-size: 24px;
-  line-height: 23px;
   margin-top: 25px;
-  margin-bottom: 36px;
+  margin-bottom: 33px;
 
   @media (min-width: @tablet-width) {
-    font-size: 36px;
-    line-height: 36px;
     margin-top: 0;
-    margin-bottom: 79px;
-    padding-left: 41px;
+    margin-bottom: 77px;
   }
 
   @media (min-width: @desktop-width) {
-    padding-left: 0;
     margin-bottom: 76px;
   }
 }
 
-.catalog-add__title::before,
+.catalog-add__title {
+  .base-heading();
+
+  font-size: 24px;
+  line-height: 23px;
+  display: inline-block;
+  background-color: @color-white;
+  margin: 0 -20px;
+  padding-left: 20px;
+  padding-right: 20px;
+
+  @media (min-width: @tablet-width) {
+    font-size: 36px;
+    line-height: 36px;
+    margin: 0;
+    padding-left: 40px;
+    padding-right: 40px;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-left: -40px;
+  }
+}
+
+
 .catalog-add__title::after {
   content: "";
   position: absolute;
-  top: 50%;
-  left: 246px;
+  left: calc((160px - 50vw - @container-horizontal-padding));
+  right: calc((160px - 50vw - @container-horizontal-padding));
+  top: calc(50%);
   border-top: solid 2px @color-basic-green;
-  width: 54px;
+  z-index: -1;
 
   @media (min-width: @tablet-width) {
-    left: 418px;
-    width: 320px;
-    top: 20px;
+    left: calc((384px - 50vw - @container-horizontal-padding-tablet));
+    right: calc((384px - 50vw - @container-horizontal-padding-tablet));
+    top: calc(50% + 2px);
   }
 
   @media (min-width: @desktop-width) {
-    left: 378px;
-    width: 952px;
+    left: calc((720px - 50vw - @container-horizontal-padding-desktop));
+    right: calc((720px - 50vw - @container-horizontal-padding-desktop));
+    top: calc(50% + 4px);
   }
 }
 
-.catalog-add__title::before {
-  @media (min-width: @tablet-width) {
-    left: -30px;
-    width: 30px;
-  }
-
-  @media (min-width: @desktop-width) {
-    left: -110px;
-    width: 70px;
-  }
-}
 
 .catalog-add__container {
   @media (min-width: @desktop-width) {
