@@ -1,7 +1,7 @@
 .results {
+  .fluid();
+
   background-color: @color-middle-grey;
-  margin-left: -@container-horizontal-padding;
-  margin-right: -@container-horizontal-padding;
   padding-top: 25px;
   padding-bottom: 40px;
   padding-left: @container-horizontal-padding;
@@ -10,8 +10,6 @@
   @media (min-width: @tablet-width) {
     position: relative;
     background-color: transparent;
-    margin-left: -@container-horizontal-padding-tablet;
-    margin-right: -@container-horizontal-padding-tablet;
     padding-top: 0;
     padding-bottom: 0;
     padding-left: @container-horizontal-padding-tablet;
@@ -19,14 +17,19 @@
   }
 
   @media (min-width: @desktop-width) {
-    margin-left: -@container-horizontal-padding-desktop;
-    margin-right: -@container-horizontal-padding-desktop;
     padding-left: @container-horizontal-padding-desktop;
     padding-right: @container-horizontal-padding-desktop;
   }
 }
 
 .results__content {
+  max-width: 280px;
+  margin: 0 auto;
+
+  @media (min-width: @tablet-width) {
+    max-width: unset;
+  }
+
   @media (min-width: @desktop-width) {
     box-sizing: border-box;
     display: grid;
@@ -39,12 +42,19 @@
       "label-wrapper image";
     margin-left: -110px;
     width: calc(100% + @container-horizontal-padding-desktop * 2);
-    padding: 0 110px;
+    padding: 0 calc(50vw - 720px + 110px);
     background-color: @color-basic-grey;
     background-repeat: no-repeat;
     background-image: linear-gradient(to right, @color-white, @color-white);
     background-position: 0 0;
     background-size: 100% 134px;
+  }
+}
+
+.results__description {
+  @media (min-width: @tablet-width) {
+    max-width: 708px;
+    margin: 0 auto;
   }
 }
 
@@ -95,7 +105,7 @@
   @media (min-width: @tablet-width) {
     display: flex;
     flex-direction: column;
-    align-items: end;
+    align-items: flex-end;
     gap: 9px;
     margin-top: 11px;
   }
@@ -133,18 +143,6 @@
   }
 }
 
-.background-placeholder {
-  @media (min-width: @tablet-width) {
-    position: absolute;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background-color: @color-basic-grey;
-    height: 462px;
-    z-index: -1;
-  }
-}
-
 .results__image-wrapper {
   grid-area: image;
   justify-self: center;
@@ -169,101 +167,4 @@
     margin-right: auto;
     background-color: @color-basic-grey;
   }
-}
-
-.before-after-slider {
-  margin: 20px auto 0;
-  overflow: hidden;
-  position: relative;
-  width: 280px;
-  height: 256px;
-  user-select: none;
-
-  @media (min-width: @tablet-width) {
-    margin: 0 auto;
-    width: 560px;
-    height: 512px;
-  }
-}
-
-.before-after-slider__view {
-  position: absolute;
-  top: 0;
-  left: 0;
-  overflow: hidden;
-  background-color: @color-middle-grey;
-
-  @media (min-width: @tablet-width) {
-    background-repeat: no-repeat;
-    background-image: linear-gradient(to right, @color-white, @color-white);
-    background-position: 0 0;
-    background-size: 100% 152px;
-  }
-
-  @media (min-width: @desktop-width) {
-    background-color: @color-basic-grey;
-    background-size: 100% 134px;
-  }
-}
-
-.before-after-slider__view--before {
-  z-index: 200;
-  width: 50%;
-}
-
-.before-after-slider__view--after {
-  z-index: 100;
-}
-
-.before-after-slider__image {
-  width: 280px;
-  max-width: 280px;
-  height: 256px;
-  object-fit: cover;
-
-  @media (min-width: @tablet-width) {
-    width: 560px;
-    max-width: 560px;
-    height: 512px;
-  }
-}
-
-.before-after-slider__drag-bar {
-  position: absolute;
-  width: 4px;
-  height: 100%;
-  top: 0;
-  left: calc(50% - 2px);
-  background-color: currentColor;
-  color: #666666;
-  cursor: pointer;
-  z-index: 300;
-  border-radius: 2px;
-}
-
-.before-after-slider__drag-bar:hover {
-  color: @color-basic-green;
-}
-
-.before-after-slider__drag-bar:active {
-  color: @color-extra-green;
-}
-
-.before-after-slider__drag-bar-circle {
-  position: absolute;
-  top: calc(50% - 20px);
-  left: -18px;
-  border-radius: 100%;
-  width: 40px;
-  height: 40px;
-  text-align: center;
-  background-color: @color-white;
-  border: 2px currentColor solid;
-  color: currentColor;
-  box-sizing: border-box;
-  cursor: pointer;
-  z-index: 300;
-  display: flex;
-  align-items: center;
-  justify-content: center;
 }

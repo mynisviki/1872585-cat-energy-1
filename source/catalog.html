@@ -21,15 +21,15 @@
   <header class="header container">
     <div class="header__wrapper header__wrapper_static header__wrapper--catalog">
       <div class="header__logo-wrapper">
-        <a class="header__logo">
+        <a class="header__logo" href="index.html">
           <picture>
             <source media="(min-width: 1440px)" srcset="img/logo/logo-desktop.svg">
             <source media="(min-width: 768px)" srcset="img/logo/logo-tablet.svg">
             <img class="header__logo-image" src="img/logo/logo-mobile.svg" alt="Логотип 'Кэт энерджи'">
           </picture>
         </a>
-        <a class="header__logo-text logo-text">
-          <img class="logo-text-image" src="img/logo/logo-text.svg" alt="Логотип 'Cat Energy'">
+        <a class="header__logo-text logo-text" href="index.html">
+          <img class="logo-text__image" src="img/logo/logo-text.svg" alt="Логотип 'Cat Energy'">
         </a>
       </div>
       <nav class="main-nav">
@@ -345,7 +345,9 @@
     <!-- Catalog add block -->
     <section class="catalog-add">
       <div class="catalog-add__wrapper">
-        <h2 class="catalog-add__title">Дополнительные товары</h2>
+        <div class="catalog-add__title-wrapper">
+          <h2 class="catalog-add__title">Дополнительные товары</h2>
+        </div>
         <div class="catalog-add__container">
           <div class="catalog-add__list-wrapper">
             <div class="separator separator--hidden"></div>
@@ -440,16 +442,18 @@
     <!-- Location block -->
     <section class="location location--catalog">
       <h2 class="visually-hidden">Адрес</h2>
-      <div class="location__wrapper location__wrapper--light">
-        <p class="heading-small location-label">Приглашаем <br> к сотрудничеству дилеров!</p>
-        <address class="location-address">
-          <span>ул. Большая Конюшенная, д. 19/8</span>
-          <span class="location-address__city">Санкт-Петербург</span>
-        </address>
+      <div class="location__wrapper">
+        <div class="location__description">
+          <p class="heading-small location__label">Приглашаем <br> к сотрудничеству дилеров!</p>
+          <address class="location__address">
+            <span>ул. Большая Конюшенная, д. 19/8</span>
+            <span class="location__city">Санкт-Петербург</span>
+          </address>
+        </div>
       </div>
       <div class="map-container">
         <h2 class="visually-hidden">Как до нас добраться</h2>
-        <iframe class="map-size"
+        <iframe class="map"
           src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1998.6037999040354!2d30.322010416394033!3d59.938716271971415!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca5ba729%3A0xea9c53d4493c879f!2sBolshaya+Konyushennaya+ul.%2C+19%2C+Sankt-Peterburg%2C+Russia%2C+191186!5e0!3m2!1sen!2s!4v1441888483426"
           allowfullscreen
           title="Офис компании по адресу набережная реки Карповки, 5, литера П, Санкт-Петербург"></iframe>
@@ -499,7 +503,7 @@
       </div>
       <a class="footer__copyright copyright" href="https://htmlacademy.ru/intensive/adaptive">
         <b class="copyright__text">HTML Academy</b>
-        <svg class="copyright__icon" width="27" height="34">
+        <svg class="footer__copyright-icon copyright__icon" width="27" height="34">
           <use href="img/sprite.svg#icon-copyright"></use>
         </svg>
       </a>

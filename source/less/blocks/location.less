@@ -1,39 +1,32 @@
 .location {
+  .fluid();
+
   @media (min-width: @desktop-width) {
     position: relative;
   }
 }
 
-.location--catalog {
-  @media (min-width: @tablet-width) {
-    margin-bottom: 4px;
-  }
-
-  @media (min-width: @desktop-width) {
-    margin-bottom: 0;
-  }
-}
-
 .location__wrapper {
   background-color: @color-basic-grey;
+}
 
+.location__description {
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-left: -@container-horizontal-padding;
-  margin-right: -@container-horizontal-padding;
 
   padding-top: 27px;
   padding-bottom: 26px;
   padding-left: @container-horizontal-padding;
   padding-right: @container-horizontal-padding;
+  max-width: 280px;
+  margin: 0 auto;
 
   @media (min-width: @tablet-width) {
     justify-content: space-between;
     align-items: flex-start;
     padding: 60px 70px;
-    margin-left: -@container-horizontal-padding-tablet;
-    margin-right: -@container-horizontal-padding-tablet;
+    max-width: 628px;
   }
 
   @media (min-width: @desktop-width) {
@@ -41,7 +34,7 @@
     margin-left: 0;
     margin-right: 0;
     z-index: 1;
-    left: 0;
+    left: calc(50vw - 720px + @container-horizontal-padding-desktop);
     top: 95px;
     width: 407px;
     padding: 60px 78px 60px 80px;
@@ -66,7 +59,7 @@
   background-color: @color-white;
 }
 
-.location-label {
+.location__label {
   text-transform: uppercase;
   min-width: 140px;
   margin: 0;
@@ -78,7 +71,7 @@
   }
 }
 
-.location-address {
+.location__address {
   .base-lato();
 
   font-size: 14px;
@@ -102,49 +95,10 @@
   }
 }
 
-.location-address__city {
+.location__city {
   margin-top: 19px;
 }
 
-
-.map-container {
-  position: relative;
-  margin-left: -@container-horizontal-padding;
-  margin-right: -@container-horizontal-padding;
-
-  @media (min-width: @tablet-width) {
-    margin-left: -@container-horizontal-padding-tablet;
-    margin-right: -@container-horizontal-padding-tablet;
-  }
-
-  @media (min-width: @desktop-width) {
-    margin-left: -@container-horizontal-padding-desktop;
-    margin-right: -@container-horizontal-padding-desktop;
-  }
-}
-
-.map-size {
-  display: block;
-  border: none;
-  height: 362px;
-  width: 100%;
-
-  @media (min-width: @tablet-width) {
-    height: 400px;
-  }
-}
-
-.map-container--small {
-  @media (min-width: @tablet-width) {
-    margin-left: -@container-horizontal-padding-tablet-small;
-    margin-right: -@container-horizontal-padding-tablet-small;
-  }
-
-  @media (min-width: @desktop-width) {
-    margin-left: -@container-horizontal-padding-desktop;
-    margin-right: -@container-horizontal-padding-desktop;
-  }
-}
 
 .location__pin {
   position: absolute;

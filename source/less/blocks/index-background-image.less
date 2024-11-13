@@ -1,13 +1,15 @@
 .index-background-image {
   @media (min-width: @desktop-width) {
-    width: 720px;
     height: 694px;
     position: absolute;
     background-image: url("../img/index-background-desktop.jpg");
+    background-color: @color-extra-green;
     background-size: 100%;
     background-repeat: no-repeat;
+    background-position: 0 0;
     top: 0;
-    right: 0;
+    left: 50%;
+    right: calc((720px - 50vw));
 
     @media (min-resolution: 2dppx) {
       background-image: url("../img/index-background-desktop@2x.jpg");

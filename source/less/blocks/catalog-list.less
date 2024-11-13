@@ -1,0 +1,28 @@
+.catalog-list {
+  @media (min-width: @tablet-width) {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    row-gap: 141px;
+    margin-bottom: 69px;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-bottom: 77px;
+  }
+}
+
+.catalog-list__item-container {
+  @media (min-width: @tablet-width) {
+    position: relative;
+    padding: 158px 37px 40px 37px;
+    background-color: @color-basic-grey;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 171px;
+    padding-top: 149px;
+    padding-bottom: 39px;
+  }
+}

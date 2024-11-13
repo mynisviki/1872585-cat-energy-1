@@ -20,15 +20,15 @@
   <header class="header container">
     <div class="header__wrapper header__wrapper_static">
       <div class="header__logo-wrapper">
-        <a class="header__logo">
+        <a class="header__logo" href="index.html">
           <picture>
             <source media="(min-width: 1440px)" srcset="img/logo/logo-desktop.svg">
             <source media="(min-width: 768px)" srcset="img/logo/logo-tablet.svg">
             <img class="header__logo-image" src="img/logo/logo-mobile.svg" alt="Логотип 'Кэт энерджи'">
           </picture>
         </a>
-        <a class="header__logo-text logo-text">
-          <img class="logo-text-image" src="img/logo/logo-text.svg" alt="Логотип 'Cat Energy'">
+        <a class="header__logo-text logo-text" href="index.html">
+          <img class="logo-text__image" src="img/logo/logo-text.svg" alt="Логотип 'Cat Energy'">
         </a>
       </div>
       <nav class="main-nav">
@@ -93,7 +93,8 @@
             </div>
             <p class="program-item__description">Ваш кот весит больше собаки и почти утратил способность лазить по
               деревьям? Пора на диету! Cat Energy Slim поможет вашему питомцу сбросить лишний вес.</p>
-            <a class="catalog-link catalog-link-slim">Каталог Slim<span class="right-arrow"></span></a>
+            <a class="catalog-link catalog-link-slim">Каталог Slim<span
+                class="catalog-link__arrow right-arrow"></span></a>
           </li>
 
           <li class="programs-list__item programs-list__item_big program-item">
@@ -103,7 +104,7 @@
             </div>
             <p class="program-item__description">Заработать авторитет среди дворовых котов и даже собак? Серия Cat
               Energy Pro поможет вашему коту нарастить необходимые мышцы!</p>
-            <a class="catalog-link catalog-link-pro">Каталог PRO<span class="right-arrow"></span>
+            <a class="catalog-link catalog-link-pro">Каталог PRO<span class="catalog-link__arrow right-arrow"></span>
             </a>
           </li>
         </ul>
@@ -137,25 +138,27 @@
     <!-- Results block -->
     <section class="results">
       <div class="results__content">
-        <h2 class="results__title">Живой пример</h2>
-        <p class="results__text">Борис сбросил 5 кг за 2 месяца, просто заменив свой обычный корм на Cat Energy
-          Slim. Отличный результат без изнуряющих тренировок! При этом он не менял своих привычек и по-прежнему спит
-          по 16 часов в день.</p>
-        <div class="statistics">
-          <ul class="statistics__list list">
-            <li class="statistics__item">
-              <p class="statistics__title">5 КГ</p>
-              <p class="statistics__text statistics__text--first">снижение веса</p>
-            </li>
-            <li class="statistics__item">
-              <p class="statistics__title">60 ДНЕЙ</p>
-              <p class="statistics__text">затрачено времени</p>
-            </li>
-          </ul>
-          <p class="results__label-wrapper">
-            <span class="results__label results__label--text">Затраты на питание:</span>
-            <span class="results__label results__label--value">15 000 РУБ.</span>
-          </p>
+        <div class="results__description">
+          <h2 class="results__title">Живой пример</h2>
+          <p class="results__text">Борис сбросил 5 кг за 2 месяца, просто заменив свой обычный корм на Cat Energy
+            Slim. Отличный результат без изнуряющих тренировок! При этом он не менял своих привычек и по-прежнему спит
+            по 16 часов в день.</p>
+          <div class="statistics">
+            <ul class="statistics__list list">
+              <li class="statistics__item">
+                <p class="statistics__title">5 КГ</p>
+                <p class="statistics__text statistics__text--first">снижение веса</p>
+              </li>
+              <li class="statistics__item">
+                <p class="statistics__title">60 ДНЕЙ</p>
+                <p class="statistics__text">затрачено времени</p>
+              </li>
+            </ul>
+            <p class="results__label-wrapper">
+              <span class="results__label results__label--text">Затраты на питание:</span>
+              <span class="results__label results__label--value">15 000 РУБ.</span>
+            </p>
+          </div>
         </div>
 
         <div class="results__image-wrapper">
@@ -185,15 +188,17 @@
     <section class="location">
       <h2 class="visually-hidden">Адрес</h2>
       <div class="location__wrapper location__wrapper--light">
-        <p class="heading-small location-label">Приглашаем <br> к сотрудничеству дилеров!</p>
-        <address class="location-address">
-          <span>ул. Большая Конюшенная, д. 19/8</span>
-          <span class="location-address__city">Санкт-Петербург</span>
-        </address>
+        <div class="location__description">
+          <p class="heading-small location__label">Приглашаем <br> к сотрудничеству дилеров!</p>
+          <address class="location__address">
+            <span>ул. Большая Конюшенная, д. 19/8</span>
+            <span class="location__city">Санкт-Петербург</span>
+          </address>
+        </div>
       </div>
       <div class="map-container">
         <h2 class="visually-hidden">Как до нас добраться</h2>
-        <iframe class="map-size"
+        <iframe class="map"
           src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1998.6037999040354!2d30.322010416394033!3d59.938716271971415!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca5ba729%3A0xea9c53d4493c879f!2sBolshaya+Konyushennaya+ul.%2C+19%2C+Sankt-Peterburg%2C+Russia%2C+191186!5e0!3m2!1sen!2s!4v1441888483426"
           allowfullscreen
           title="Офис компании по адресу набережная реки Карповки, 5, литера П, Санкт-Петербург"></iframe>
@@ -243,7 +248,7 @@
       </div>
       <a class="footer__copyright copyright" href="https://htmlacademy.ru/intensive/adaptive">
         <b class="copyright__text">HTML Academy</b>
-        <svg class="copyright__icon" width="27" height="34">
+        <svg class="footer__copyright-icon copyright__icon" width="27" height="34">
           <use href="img/sprite.svg#icon-copyright"></use>
         </svg>
       </a>
