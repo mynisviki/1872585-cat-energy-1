@@ -1,0 +1,16 @@
+.footer-logo-text {
+  margin: 0;
+}
+
+.footer-logo-text::after {
+  content: "";
+  display: block;
+  height: 1px;
+  margin-top: 15px;
+  background: @color-light-grey;
+  width: 280px;
+
+  @media (min-width: @tablet-width) {
+    content: none;
+  }
+}
