@@ -7,7 +7,9 @@
     border-bottom: 1px solid @color-extra-grey;
 
     .header__wrapper_static & {
-      border-block-width: 0;
+      @media (max-width: (@tablet-width - 1)) {
+        border-bottom-color: transparent;
+      }
     }
   }
 
@@ -27,15 +29,18 @@
 }
 
 .site-list__item_active {
-  border-bottom-color: transparent;
+  &,
+  .header__wrapper_static & {
+    border-bottom-color: transparent;
 
-  @media (min-width: @tablet-width) {
-    border-bottom-color: @color-basic-green;
-  }
+    @media (min-width: @tablet-width) {
+      border-bottom-color: @color-basic-green;
+    }
 
-  @media (min-width: @desktop-width) {
-    &.site-list__item_white {
-      border-bottom-color: @color-white;
+    @media (min-width: @desktop-width) {
+      &.site-list__item_white {
+        border-bottom-color: @color-white;
+      }
     }
   }
 }
