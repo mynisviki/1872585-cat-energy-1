@@ -5,6 +5,10 @@
 
   &:last-child {
     border-bottom: 1px solid @color-extra-grey;
+
+    .header__wrapper_static & {
+      border-block-width: 0;
+    }
   }
 
   @media (min-width: @tablet-width) {
